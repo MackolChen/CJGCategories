@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'CJGCategories_Example' do
+  pod 'CJGCategories', :path => '../'
+
+  target 'CJGCategories_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
