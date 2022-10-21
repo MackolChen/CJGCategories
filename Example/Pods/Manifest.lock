@@ -1,0 +1,16 @@
+PODS:
+  - CJGCategories (0.1.0)
+
+DEPENDENCIES:
+  - CJGCategories (from `../`)
+
+EXTERNAL SOURCES:
+  CJGCategories:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  CJGCategories: c1c17b59d26eadeeb199424f6d13bd7d3236db69
+
+PODFILE CHECKSUM: 920b9859ae5e5945be100d39b73cc8d692ee7d22
+
+COCOAPODS: 1.11.3

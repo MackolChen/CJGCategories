@@ -38,8 +38,8 @@
 
 /* Begin PBXFileReference section */
 		240BE8950FFC8D26C04BE408 /* Pods-CJGCategories_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJGCategories_Example.debug.xcconfig"; path = "Target Support Files/Pods-CJGCategories_Example/Pods-CJGCategories_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		2EF830152C057BE599EC34F0 /* CJGCategories.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = CJGCategories.podspec; path = ../CJGCategories.podspec; sourceTree = "<group>"; };
-		3A96A9830025889B3C7E1A2F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		2EF830152C057BE599EC34F0 /* CJGCategories.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CJGCategories.podspec; path = ../CJGCategories.podspec; sourceTree = "<group>"; };
+		3A96A9830025889B3C7E1A2F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* CJGCategories_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CJGCategories_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -65,7 +65,7 @@
 		9F115AC5B17E9427FB250535 /* Pods_CJGCategories_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CJGCategories_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A155E70686482254C72A68FA /* Pods-CJGCategories_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJGCategories_Example.release.xcconfig"; path = "Target Support Files/Pods-CJGCategories_Example/Pods-CJGCategories_Example.release.xcconfig"; sourceTree = "<group>"; };
 		AF8F7E484B3697A6477C85A2 /* Pods-CJGCategories_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CJGCategories_Tests.release.xcconfig"; path = "Target Support Files/Pods-CJGCategories_Tests/Pods-CJGCategories_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		C79F965E89B1505EB9AF1794 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		C79F965E89B1505EB9AF1794 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		EAF76D5DA54E155353CAF2EB /* Pods_CJGCategories_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CJGCategories_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -103,7 +103,6 @@
 				6915CF76563177A1F243E83D /* Pods-CJGCategories_Tests.debug.xcconfig */,
 				AF8F7E484B3697A6477C85A2 /* Pods-CJGCategories_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -248,6 +247,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = MackolChen;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = CD2JVZSH63;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -258,6 +260,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -494,9 +497,11 @@
 			baseConfigurationReference = 240BE8950FFC8D26C04BE408 /* Pods-CJGCategories_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CD2JVZSH63;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CJGCategories/CJGCategories-Prefix.pch";
 				INFOPLIST_FILE = "CJGCategories/CJGCategories-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -510,9 +515,11 @@
 			baseConfigurationReference = A155E70686482254C72A68FA /* Pods-CJGCategories_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = CD2JVZSH63;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CJGCategories/CJGCategories-Prefix.pch";
 				INFOPLIST_FILE = "CJGCategories/CJGCategories-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";

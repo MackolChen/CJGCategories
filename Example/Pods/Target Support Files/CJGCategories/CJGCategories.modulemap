@@ -1,0 +1,6 @@
+framework module CJGCategories {
+  umbrella header "CJGCategories-umbrella.h"
+
+  export *
+  module * { export * }
+}
