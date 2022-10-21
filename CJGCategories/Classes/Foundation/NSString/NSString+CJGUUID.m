@@ -1,6 +1,6 @@
 //
 //  NSString+CJGUUID.m
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 14/12/30.
 //  Copyright (c) 2014年 www.skyfox.org. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import "NSString+CJGUUID.h"
 #import <UIKit/UIKit.h>
-@implementation NSString (JKUUID)
+@implementation NSString (CJGUUID)
 /**
  *  @brief  获取随机 UUID 例如 E621E1F8-C36C-495A-93FC-0C247A3E6E5F
  *

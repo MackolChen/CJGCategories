@@ -9,7 +9,7 @@
 #import "UIImage+CJGVector.h"
 #import <CoreText/CoreText.h>
 
-@implementation UIImage(JKVector)
+@implementation UIImage(CJGVector)
 
 + (NSCache *)cjg_cache{
     static NSCache *cache = nil;

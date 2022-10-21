@@ -1,6 +1,6 @@
 //
 //  NSDateFormatter+Make.m
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 15/4/25.
 //  Copyright (c) 2015年 www.skyfox.org. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import "NSDateFormatter+CJGMake.h"
 
-@implementation NSDateFormatter (JKMake)
+@implementation NSDateFormatter (CJGMake)
 
 +(NSDateFormatter *)cjg_dateFormatterWithFormat:(NSString *)format {
     return [self cjg_dateFormatterWithFormat:format timeZone:nil];

@@ -32,7 +32,7 @@
 
 #import "UIImage+CJGFXImage.h"
 
-@implementation UIImage (JKFXImage)
+@implementation UIImage (CJGFXImage)
 
 - (UIImage *)cjg_imageCroppedToRect:(CGRect)rect
 {

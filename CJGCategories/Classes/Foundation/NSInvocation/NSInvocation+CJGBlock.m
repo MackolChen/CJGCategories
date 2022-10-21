@@ -46,7 +46,7 @@ static const char *__BlockSignature__(id blockObj)
     return (char*)(descriptor->rest[offset]);
 }
 
-@implementation NSInvocation (JKBlock)
+@implementation NSInvocation (CJGBlock)
 
 + (instancetype)cjg_invocationWithBlock:(id) block
 {

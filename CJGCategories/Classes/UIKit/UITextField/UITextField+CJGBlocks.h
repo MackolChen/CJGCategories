@@ -1,13 +1,13 @@
 //
 //  UITextField+Blocks.h
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 14/12/15.
 //  Copyright (c) 2014年 www.skyfox.org. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-@interface UITextField (JKBlocks)
+@interface UITextField (CJGBlocks)
 @property (copy, nonatomic) BOOL (^cjg_shouldBegindEditingBlock)(UITextField *textField);
 @property (copy, nonatomic) BOOL (^cjg_shouldEndEditingBlock)(UITextField *textField);
 @property (copy, nonatomic) void (^cjg_didBeginEditingBlock)(UITextField *textField);

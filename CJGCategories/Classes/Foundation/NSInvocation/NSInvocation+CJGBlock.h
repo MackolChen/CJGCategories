@@ -9,7 +9,7 @@
 //https://github.com/deput/NSInvocation-Block
 #import <Foundation/Foundation.h>
 
-@interface NSInvocation (JKBlock)
+@interface NSInvocation (CJGBlock)
 + (instancetype)cjg_invocationWithBlock:(id) block;
 + (instancetype)cjg_invocationWithBlockAndArguments:(id) block ,...;
 @end

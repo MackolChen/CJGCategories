@@ -11,7 +11,7 @@ static int cjg_minFontSizeKey;
 static int cjg_maxFontSizeKey;
 static int cjg_zoomEnabledKey;
 
-@implementation UITextView (JKPinchZoom)
+@implementation UITextView (CJGPinchZoom)
 
 - (void)setCjg_maxFontSize:(CGFloat)maxFontSize
 {

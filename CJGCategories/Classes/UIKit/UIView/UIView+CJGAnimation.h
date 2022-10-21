@@ -10,7 +10,7 @@
 
 float cjg_radiansForDegrees(int degrees);
 
-@interface UIView (JKAnimation)
+@interface UIView (CJGAnimation)
 
 // Moves
 - (void)cjg_moveTo:(CGPoint)destination duration:(float)secs option:(UIViewAnimationOptions)option;

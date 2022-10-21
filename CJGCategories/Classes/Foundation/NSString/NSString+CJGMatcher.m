@@ -7,7 +7,7 @@
 
 #import "NSString+CJGMatcher.h"
 
-@implementation NSString(JKMatcher)
+@implementation NSString(CJGMatcher)
 
 
 - (NSArray *)cjg_matchWithRegex:(NSString *)regex

@@ -9,7 +9,7 @@
 #define fromCF (id)
 #endif
 
-@implementation UIImage (JKAnimatedGIF)
+@implementation UIImage (CJGAnimatedGIF)
 
 static int cjg_delayCentisecondsForImageAtIndex(CGImageSourceRef const source, size_t const i) {
     int delayCentiseconds = 1;

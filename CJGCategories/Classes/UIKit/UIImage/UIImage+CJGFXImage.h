@@ -33,7 +33,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface UIImage (JKFXImage)
+@interface UIImage (CJGFXImage)
 
 - (UIImage *)cjg_imageCroppedToRect:(CGRect)rect;
 - (UIImage *)cjg_imageScaledToSize:(CGSize)size;

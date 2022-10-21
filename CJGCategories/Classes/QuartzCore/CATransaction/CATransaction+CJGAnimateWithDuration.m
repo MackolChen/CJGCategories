@@ -8,7 +8,7 @@
 
 #import "CATransaction+CJGAnimateWithDuration.h"
 
-@implementation CATransaction (JKAnimateWithDuration)
+@implementation CATransaction (CJGAnimateWithDuration)
 /**
  *  @author Denys Telezhkin
  *

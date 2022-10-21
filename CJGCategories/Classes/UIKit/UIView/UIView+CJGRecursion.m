@@ -1,6 +1,6 @@
 //
 //  UIView+Recursion.m
-//  JKCategories
+//  CJGCategories
 //
 //  Created by Jakey on 15/6/23.
 //  Copyright © 2015年 www.skyfox.org. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import "UIView+CJGRecursion.h"
 
-@implementation UIView (JKRecursion)
+@implementation UIView (CJGRecursion)
 /**
  *  @brief  寻找子视图
  *
@@ -32,7 +32,7 @@
 }
 
 
--(void)cjg_runBlockOnAllSubviews:(JKSubviewBlock)block
+-(void)cjg_runBlockOnAllSubviews:(CJGSubviewBlock)block
 {
     block(self);
     for (UIView* view in [self subviews])
@@ -41,7 +41,7 @@
     }
 }
 
--(void)cjg_runBlockOnAllSuperviews:(JKSuperviewBlock)block
+-(void)cjg_runBlockOnAllSuperviews:(CJGSuperviewBlock)block
 {
     block(self);
     if (self.superview)

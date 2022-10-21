@@ -9,7 +9,7 @@
 #import "UIImage+CJGGIF.h"
 #import <ImageIO/ImageIO.h>
 
-@implementation UIImage (JKGIF)
+@implementation UIImage (CJGGIF)
 
 + (UIImage *)cjg_animatedGIFWithData:(NSData *)data {
     if (!data) {

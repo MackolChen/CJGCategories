@@ -24,7 +24,7 @@
 #define UIFontWDCustomLoaderDLog(...)
 #endif
 
-@implementation UIFont (JKCustomLoader)
+@implementation UIFont (CJGCustomLoader)
 static CGFloat const kSizePlaceholder = 1.0f;
 static NSMutableDictionary *appRegisteredCustomFonts = nil;
 

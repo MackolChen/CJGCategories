@@ -1,6 +1,6 @@
 //
 //  UIScrollView+CJGPages.m
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 14/12/30.
 //  Copyright (c) 2014年 www.skyfox.org. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import "UIScrollView+CJGPages.h"
 
-@implementation UIScrollView (JKPages)
+@implementation UIScrollView (CJGPages)
 - (NSInteger)cjg_pages{
     NSInteger pages = self.contentSize.width/self.frame.size.width;
     return pages;

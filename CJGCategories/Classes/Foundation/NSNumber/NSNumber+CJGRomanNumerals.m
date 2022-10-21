@@ -7,7 +7,7 @@
 
 #import "NSNumber+CJGRomanNumerals.h"
 
-@implementation NSNumber (JKRomanNumerals)
+@implementation NSNumber (CJGRomanNumerals)
 
 - (NSString *)cjg_romanNumeral
 {

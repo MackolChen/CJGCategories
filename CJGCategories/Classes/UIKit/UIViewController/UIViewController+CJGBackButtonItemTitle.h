@@ -8,13 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol JKBackButtonItemTitleProtocol <NSObject>
+@protocol CJGBackButtonItemTitleProtocol <NSObject>
 
 @optional
 - (NSString *)cjg_navigationItemBackBarButtonTitle; //The length of the text is limited, otherwise it will be set to "Back"
 
 @end
 
-@interface UIViewController (JKBackButtonItemTitle) <JKBackButtonItemTitleProtocol>
+@interface UIViewController (CJGBackButtonItemTitle) <CJGBackButtonItemTitleProtocol>
 
 @end

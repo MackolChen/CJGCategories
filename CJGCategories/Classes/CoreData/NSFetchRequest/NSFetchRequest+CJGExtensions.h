@@ -10,7 +10,7 @@
 typedef void (^FetchObjectsCallback)(NSArray *fetchedObjects, NSError *error);
 typedef void (^FetchObjectCallback)(id fetchedObject, NSError * error);
 
-@interface NSFetchRequest(JKExtensions)
+@interface NSFetchRequest(CJGExtensions)
 
 + (id)cjg_fetchRequestWithEntity:(NSEntityDescription *)entity;
 + (id)cjg_fetchRequestWithEntity:(NSEntityDescription *)entity predicate:(NSPredicate *)predicate;

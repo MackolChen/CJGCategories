@@ -9,9 +9,9 @@
 
 #import <QuartzCore/QuartzCore.h>
 #import <UIKit/UIKit.h>
-@interface CALayer (JKBorderColor)
+@interface CALayer (CJGBorderColor)
 /**
- *  @author JKCategories
+ *  @author CJGCategories
  *
  *  layer边框颜色
  */

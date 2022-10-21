@@ -22,7 +22,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIImage(JKVector)
+@interface UIImage(CJGVector)
 
 /**
  Create a UIImage from an icon font.
@@ -57,7 +57,7 @@
  Create a UIImage from a PDF icon.
  @param pdfFile The path of the PDF file.
  @param tintColor The tint color to use for the icon. If nil no tint color will be used.
- @param maxSize The maximum size the resulting image can be. The image will maintain it's aspect ratio and may not encumpas the full size.
+ @param size The maximum size the resulting image can be. The image will maintain it's aspect ratio and may not encumpas the full size.
  @return The resulting image.
  */
 + (UIImage *)cjg_imageWithPDFFile:(NSString *)pdfFile withTintColor:(UIColor *)tintColor forSize:(CGSize)size;

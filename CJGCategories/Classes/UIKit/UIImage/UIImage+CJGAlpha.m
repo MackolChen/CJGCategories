@@ -6,11 +6,11 @@
 #import "UIImage+CJGAlpha.h"
 
 // Private helper methods
-@interface UIImage (JKAlphaPrivateMethods)
+@interface UIImage (CJGAlphaPrivateMethods)
 - (CGImageRef)cjg_newBorderMask:(NSUInteger)borderSize size:(CGSize)size;
 @end
 
-@implementation UIImage (JKAlpha)
+@implementation UIImage (CJGAlpha)
 /**
  *  @brief  是否有alpha通道
  *

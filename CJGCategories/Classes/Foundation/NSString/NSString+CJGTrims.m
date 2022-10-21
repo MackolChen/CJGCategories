@@ -1,6 +1,6 @@
 //
 //  NSString+CJGTrims.m
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 15/3/29.
 //  Copyright (c) 2015年 www.skyfox.org. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import "NSString+CJGTrims.h"
 
-@implementation NSString (JKTrims)
+@implementation NSString (CJGTrims)
 /**
  *  @brief  清除html标签
  *

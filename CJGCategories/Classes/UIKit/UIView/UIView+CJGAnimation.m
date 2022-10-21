@@ -16,7 +16,7 @@ float cjg_radiansForDegrees(int degrees) {
 }
 
 
-@implementation UIView (JKAnimation)
+@implementation UIView (CJGAnimation)
 
 #pragma mark - Moves
 

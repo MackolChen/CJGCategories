@@ -12,7 +12,7 @@
 NSString * const UIDevicePasscodeKeychainService = @"UIDevice-PasscodeStatus_KeychainService";
 NSString * const UIDevicePasscodeKeychainAccount = @"UIDevice-PasscodeStatus_KeychainAccount";
 
-@implementation UIDevice (JKPasscodeStatus)
+@implementation UIDevice (CJGPasscodeStatus)
 
 - (BOOL)cjg_passcodeStatusSupported
 {
@@ -27,11 +27,11 @@ NSString * const UIDevicePasscodeKeychainAccount = @"UIDevice-PasscodeStatus_Key
 #endif
 }
 
-- (JKPasscodeStatus)cjg_passcodeStatus
+- (CJGPasscodeStatus)cjg_passcodeStatus
 {
 #if TARGET_IPHONE_SIMULATOR
     NSLog(@"-[%@ %@] - not supported in simulator", NSStringFromClass([self class]), NSStringFromSelector(_cmd));
-    return JKPasscodeStatusUnknown;
+    return CJGPasscodeStatusUnknown;
 #endif
     
 #ifdef __IPHONE_8_0
@@ -56,7 +56,7 @@ NSString * const UIDevicePasscodeKeychainAccount = @"UIDevice-PasscodeStatus_Key
         
         // unable to create the access control item.
         if (sacObject == NULL || sacError != NULL) {
-            return JKPasscodeStatusUnknown;
+            return CJGPasscodeStatusUnknown;
         }
         
         
@@ -69,24 +69,24 @@ NSString * const UIDevicePasscodeKeychainAccount = @"UIDevice-PasscodeStatus_Key
         
         // if it failed to add the item.
         if (status == errSecDecode) {
-            return JKPasscodeStatusDisabled;
+            return CJGPasscodeStatusDisabled;
         }
         
         status = SecItemCopyMatching((__bridge CFDictionaryRef)query, NULL);
         
         // it managed to retrieve data successfully
         if (status == errSecSuccess) {
-            return JKPasscodeStatusEnabled;
+            return CJGPasscodeStatusEnabled;
         }
         
         // not sure what happened, returning unknown
-        return JKPasscodeStatusUnknown;
+        return CJGPasscodeStatusUnknown;
         
     } else {
-        return JKPasscodeStatusUnknown;
+        return CJGPasscodeStatusUnknown;
     }
 #else
-    return JKPasscodeStatusUnknown;
+    return CJGPasscodeStatusUnknown;
 #endif
 }
 

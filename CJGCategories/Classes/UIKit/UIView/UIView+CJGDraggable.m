@@ -9,7 +9,7 @@
 #import "UIView+CJGDraggable.h"
 #import <objc/runtime.h>
 
-@implementation UIView (JKDraggable)
+@implementation UIView (CJGDraggable)
 
 - (void)setCjg_panGesture:(UIPanGestureRecognizer*)panGesture
 {
@@ -75,22 +75,22 @@
     return (moveAlongX) ? [moveAlongX boolValue] : YES;
 }
 
-- (void)setCjg_draggingStartedBlock:(void (^)())draggingStartedBlock
+- (void)setCjg_draggingStartedBlock:(void (^)(void))draggingStartedBlock
 {
     objc_setAssociatedObject(self, @selector(cjg_draggingStartedBlock), draggingStartedBlock, OBJC_ASSOCIATION_RETAIN);
 }
 
-- (void (^)())cjg_draggingStartedBlock
+- (void (^)(void))cjg_draggingStartedBlock
 {
     return objc_getAssociatedObject(self, @selector(cjg_draggingStartedBlock));
 }
 
-- (void)setCjg_draggingEndedBlock:(void (^)())draggingEndedBlock
+- (void)setCjg_draggingEndedBlock:(void (^)(void))draggingEndedBlock
 {
     objc_setAssociatedObject(self, @selector(cjg_draggingEndedBlock), draggingEndedBlock, OBJC_ASSOCIATION_RETAIN);
 }
 
-- (void (^)())cjg_draggingEndedBlock
+- (void (^)(void))cjg_draggingEndedBlock
 {
     return objc_getAssociatedObject(self, @selector(cjg_draggingEndedBlock));
 }

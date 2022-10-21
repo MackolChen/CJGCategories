@@ -2,7 +2,7 @@
 //https://github.com/ImJCabus/UIBezierPath-Length
 #import <UIKit/UIKit.h>
 
-@interface UIBezierPath (JKLength)
+@interface UIBezierPath (CJGLength)
 
 - (CGFloat)cjg_length;
 

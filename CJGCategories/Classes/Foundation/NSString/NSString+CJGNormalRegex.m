@@ -1,6 +1,6 @@
 //
 //  NSString+CJGNormalRegex.h
-//  JKCategories
+//  CJGCategories
 //
 //  Created by KevinHM on 15/6/24.
 //  Copyright (c) 2015年 KevinHM. All rights reserved.
@@ -9,7 +9,7 @@
 
 #import "NSString+CJGNormalRegex.h"
 
-@implementation NSString (JKNormalRegex)
+@implementation NSString (CJGNormalRegex)
 #pragma mark - 正则相关
 - (BOOL)cjg_isValidateByRegex:(NSString *)regex{
     NSPredicate *pre = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regex];

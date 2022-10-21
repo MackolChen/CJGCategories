@@ -1,19 +1,19 @@
 //
-//  JKCategories.h
-//  JKCategories
+//  CJGCategories.h
+//  CJGCategories
 //
 //  Created by Jakey on 16/5/30.
 //  Copyright © 2016年 www.skyfox.org. All rights reserved.
 //
 
-#ifndef JKCategories_h
-#define JKCategories_h
+#ifndef CJGCategories_h
+#define CJGCategories_h
 
-#import "JKUIKit.h"
-#import "JKQuartzCore.h"
-#import "JKCoreData.h"
-#import "JKFoundation.h"
-#import "JKMapKit.h"
-#import "JKCoreLocation.h"
+#import "CJGUIKit.h"
+#import "CJGQuartzCore.h"
+#import "CJGCoreData.h"
+#import "CJGFoundation.h"
+#import "CJGMapKit.h"
+#import "CJGCoreLocation.h"
 
-#endif /* JKCategories_h */
+#endif /* CJGCategories_h */

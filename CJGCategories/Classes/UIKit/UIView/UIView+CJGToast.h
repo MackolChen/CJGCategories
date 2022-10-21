@@ -28,11 +28,11 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 #import <UIKit/UIKit.h>
 
-extern NSString * const JKToastPositionTop;
-extern NSString * const JKToastPositionCenter;
-extern NSString * const JKToastPositionBottom;
+extern NSString * const CJGToastPositionTop;
+extern NSString * const CJGToastPositionCenter;
+extern NSString * const CJGToastPositionBottom;
 
-@interface UIView (JKToast)
+@interface UIView (CJGToast)
 
 // each makeToast method creates a view and displays it as toast
 - (void)cjg_makeToast:(NSString *)message;

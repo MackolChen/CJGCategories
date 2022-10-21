@@ -1,22 +1,22 @@
 
 //https://github.com/bitbasenyc/nsdata-zlib
-@interface NSData (JKzlib)
+@interface NSData (CJGzlib)
 
 /**
  ZLib error domain
  */
-extern NSString *const JKZlibErrorDomain;
+extern NSString *const CJGZlibErrorDomain;
 /**
  When a zlib error occurs, querying this key in the @p userInfo dictionary of the
  @p NSError object will return the underlying zlib error code.
  */
-extern NSString *const JKZlibErrorInfoKey;
+extern NSString *const CJGZlibErrorInfoKey;
 
-typedef NS_ENUM(NSUInteger, JKZlibErrorCode) {
-    JKZlibErrorCodeFileTooLarge = 0,
-    JKZlibErrorCodeDeflationError = 1,
-    JKZlibErrorCodeInflationError = 2,
-    JKZlibErrorCodeCouldNotCreateFileError = 3,
+typedef NS_ENUM(NSUInteger, CJGZlibErrorCode) {
+    CJGZlibErrorCodeFileTooLarge = 0,
+    CJGZlibErrorCodeDeflationError = 1,
+    CJGZlibErrorCodeInflationError = 2,
+    CJGZlibErrorCodeCouldNotCreateFileError = 3,
 };
 
 /**

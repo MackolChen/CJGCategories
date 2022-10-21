@@ -1,6 +1,6 @@
 //
 //  UIImage+RemoteSize.m
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 15/1/27.
 //  Copyright (c) 2015年 www.skyfox.org. All rights reserved.
@@ -16,19 +16,19 @@ static char *kSizeRequestCompletionKey = "NSURL.sizeRequestCompletion";
 
 typedef uint32_t dword;
 
-@interface NSURL (JKRemoteSize)
+@interface NSURL (CJGRemoteSize)
 @property (nonatomic, strong) NSMutableData *cjg_sizeRequestData;
 @property (nonatomic, strong) NSString *cjg_sizeRequestType;
-@property (nonatomic, copy) JKUIImageSizeRequestCompleted cjg_sizeRequestCompletion;
+@property (nonatomic, copy) CJGUIImageSizeRequestCompleted cjg_sizeRequestCompletion;
 @end
 
 @implementation NSURL (RemoteSize)
 
-- (void)setCjg_sizeRequestCompletion: (JKUIImageSizeRequestCompleted) block {
+- (void)setCjg_sizeRequestCompletion: (CJGUIImageSizeRequestCompleted) block {
     objc_setAssociatedObject(self, &kSizeRequestCompletionKey, block, OBJC_ASSOCIATION_COPY);
 }
 
-- (JKUIImageSizeRequestCompleted)cjg_sizeRequestCompletion {
+- (CJGUIImageSizeRequestCompleted)cjg_sizeRequestCompletion {
     return objc_getAssociatedObject(self, &kSizeRequestCompletionKey);
 }
 
@@ -241,7 +241,7 @@ typedef uint32_t dword;
 
 @implementation UIImage (RemoteSize)
 
-+ (void)requestSizeNoHeader:(NSURL*)imgURL completion:(JKUIImageSizeRequestCompleted)completion{
++ (void)requestSizeNoHeader:(NSURL*)imgURL completion:(CJGUIImageSizeRequestCompleted)completion{
     
     if([imgURL isFileURL] ) {
         //Load from file stream
@@ -257,7 +257,7 @@ typedef uint32_t dword;
 }
 
 
-+ (void)requestSizeWithHeader:(NSURL*)imgURL completion:(JKUIImageSizeRequestCompleted)completion{
++ (void)requestSizeWithHeader:(NSURL*)imgURL completion:(CJGUIImageSizeRequestCompleted)completion{
 //        NSURLRequest* request = [NSURLRequest requestWithURL:imgURL];
 //
 //        [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *resp, NSData *d, NSError *e) {

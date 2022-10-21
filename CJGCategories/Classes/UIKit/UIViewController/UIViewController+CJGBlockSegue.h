@@ -29,11 +29,11 @@
 
 #import <UIKit/UIKit.h>
 
-typedef void (^UIViewControllerJKSegueBlock) (id sender, id destinationVC, UIStoryboardSegue *segue);
+typedef void (^UIViewControllerCJGSegueBlock) (id sender, id destinationVC, UIStoryboardSegue *segue);
 
-@interface UIViewController (JKBlockSegue)
+@interface UIViewController (CJGBlockSegue)
 
--(void)cjg_configureSegue:(NSString *)identifier withBlock:(UIViewControllerJKSegueBlock)block;
--(void)cjg_performSegueWithIdentifier:(NSString *)identifier sender:(id)sender withBlock:(UIViewControllerJKSegueBlock)block;
+-(void)cjg_configureSegue:(NSString *)identifier withBlock:(UIViewControllerCJGSegueBlock)block;
+-(void)cjg_performSegueWithIdentifier:(NSString *)identifier sender:(id)sender withBlock:(UIViewControllerCJGSegueBlock)block;
 
 @end

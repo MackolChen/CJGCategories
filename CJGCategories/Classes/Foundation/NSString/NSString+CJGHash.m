@@ -1,6 +1,6 @@
 //
 //  NSString+CJGHash.m
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 14/12/15.
 //  Copyright (c) 2014年 www.skyfox.org. All rights reserved.
@@ -9,7 +9,7 @@
 #import "NSString+CJGHash.h"
 #import <CommonCrypto/CommonDigest.h>
 #import <CommonCrypto/CommonHMAC.h>
-@implementation NSString (JKHash)
+@implementation NSString (CJGHash)
 - (NSString *)cjg_md5String
 {
     const char *string = self.UTF8String;

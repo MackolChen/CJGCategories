@@ -12,7 +12,7 @@
 static NSString *const cjg_IndicatorViewKey = @"indicatorView";
 static NSString *const cjg_ButtonTextObjectKey = @"buttonTextObject";
 
-@implementation UIButton (JKIndicator)
+@implementation UIButton (CJGIndicator)
 
 - (void)cjg_showIndicator {
     

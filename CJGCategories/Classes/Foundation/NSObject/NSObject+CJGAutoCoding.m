@@ -32,8 +32,8 @@
 #import "NSObject+CJGAutoCoding.h"
 #import <objc/runtime.h>
 #pragma GCC diagnostic ignored "-Wgnu"
-static NSString *const JKAutocodingException = @"JKAutocodingException";
-@implementation NSObject (JKAutoCoding)
+static NSString *const CJGAutocodingException = @"CJGAutocodingException";
+@implementation NSObject (CJGAutoCoding)
 + (BOOL)supportsSecureCoding
 {
     return YES;
@@ -235,7 +235,7 @@ static NSString *const JKAutocodingException = @"JKAutocodingException";
         {
             if (secureSupported && ![object isKindOfClass:propertyClass])
             {
-                [NSException raise:JKAutocodingException format:@"Expected '%@' to be a %@, but was actually a %@", key, propertyClass, [object class]];
+                [NSException raise:CJGAutocodingException format:@"Expected '%@' to be a %@, but was actually a %@", key, propertyClass, [object class]];
             }
             [self setValue:object forKey:key];
         }

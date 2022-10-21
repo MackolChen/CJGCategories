@@ -1,6 +1,6 @@
 //
 //  NSDate+Utilities.h
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 14/12/30.
 //  Copyright (c) 2014年 www.skyfox.org. All rights reserved.
@@ -12,7 +12,7 @@
 #define D_DAY	86400
 #define D_WEEK	604800
 #define D_YEAR	31556926
-@interface NSDate (JKUtilities)
+@interface NSDate (CJGUtilities)
 
 + (NSCalendar *)cjg_currentCalendar; // avoid bottlenecks
 

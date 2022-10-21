@@ -8,7 +8,7 @@
 
 #import "UIApplication+CJGApplicationSize.h"
 
-@implementation UIApplication (JKApplicationSize)
+@implementation UIApplication (CJGApplicationSize)
 
 - (NSString *)cjg_applicationSize {
     unsigned long long docSize   =  [self cjg_sizeOfFolder:[self cjg_documentPath]];

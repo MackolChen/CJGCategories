@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UITableViewCell (JKDelaysContentTouches)
+@interface UITableViewCell (CJGDelaysContentTouches)
 
 @property (nonatomic, assign) BOOL cjg_delaysContentTouches;
 

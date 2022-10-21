@@ -25,7 +25,7 @@
  You can use `UIFont+WDCustomLoader` category to load custom fonts for your
  application without worring about plist or real font names.
  */
-@interface UIFont (JKCustomLoader)
+@interface UIFont (CJGCustomLoader)
 
 /// @name Implicit registration and font loading
 
@@ -34,7 +34,7 @@
  
  This method calls `+customFontWithURL:size`.
  
- @deprecated
+ @ deprecated
  @see +customFontWithURL:size: method
  @param size Font size
  @param name Font filename without extension

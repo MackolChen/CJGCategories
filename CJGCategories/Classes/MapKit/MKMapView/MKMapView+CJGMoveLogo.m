@@ -8,7 +8,7 @@
 
 #import "MKMapView+CJGMoveLogo.h"
 
-@implementation MKMapView (JKMoveLogo)
+@implementation MKMapView (CJGMoveLogo)
 
 - (void)cjg_moveLogoByOffset:(CGPoint)offset {
     UIView* logo = [self cjg_logo];

@@ -7,7 +7,7 @@
 
 #import <QuartzCore/QuartzCore.h>
 
-@interface CAMediaTimingFunction (JKAdditionalEquations)
+@interface CAMediaTimingFunction (CJGAdditionalEquations)
 
 
 ///---------------------------------------------------------------------------------------

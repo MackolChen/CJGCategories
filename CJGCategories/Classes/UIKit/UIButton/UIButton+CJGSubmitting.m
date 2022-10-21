@@ -17,7 +17,7 @@
 
 @end
 
-@implementation UIButton (JKSubmitting)
+@implementation UIButton (CJGSubmitting)
 
 - (void)cjg_beginSubmitting:(NSString *)title {
     [self cjg_endSubmitting];
@@ -53,7 +53,7 @@
 }
 
 - (void)cjg_endSubmitting {
-    if (!self.isJKSubmitting.boolValue) {
+    if (!self.isCJGSubmitting.boolValue) {
         return;
     }
     
@@ -66,7 +66,7 @@
     self.cjg_spinnerTitleLabel = nil;
 }
 
-- (NSNumber *)isJKSubmitting {
+- (NSNumber *)isCJGSubmitting {
     return objc_getAssociatedObject(self, @selector(setCjg_submitting:));
 }
 

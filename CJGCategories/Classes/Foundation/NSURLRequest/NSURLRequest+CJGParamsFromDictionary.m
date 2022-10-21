@@ -13,7 +13,7 @@
 
 #import "NSURLRequest+CJGParamsFromDictionary.h"
 
-@implementation NSURLRequest (JKParamsFromDictionary)
+@implementation NSURLRequest (CJGParamsFromDictionary)
 
 +(NSURLRequest *)cjg_requestGETWithURL:(NSURL *)url parameters:(NSDictionary *)params {
     //This code is ARC only.

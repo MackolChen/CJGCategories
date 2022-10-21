@@ -15,7 +15,7 @@
 #define __nullable
 #endif
 
-@interface CATransaction (JKAnimateWithDuration)
+@interface CATransaction (CJGAnimateWithDuration)
 /**
  *  @author Denys Telezhkin
  *

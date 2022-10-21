@@ -9,7 +9,7 @@
 #import <CoreData/CoreData.h>
 #import "NSManagedObjectContext+CJGExtensions.h"
 
-@interface NSManagedObject (JKExtensions)
+@interface NSManagedObject (CJGExtensions)
 
 + (id)cjg_create:(NSManagedObjectContext*)context;
 + (id)cjg_create:(NSDictionary*)dict inContext:(NSManagedObjectContext*)context;

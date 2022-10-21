@@ -1,6 +1,6 @@
 //
 //  NSObject+CJGEasyCopy.m
-//  NSObject-JKEasyCopy
+//  NSObject-CJGEasyCopy
 //
 //  Created by York on 15/12/1.
 //  Copyright © 2015年 YK-Unit. All rights reserved.
@@ -9,7 +9,7 @@
 #import "NSObject+CJGEasyCopy.h"
 #import <objc/runtime.h>
 
-@implementation NSObject (JKEasyCopy)
+@implementation NSObject (CJGEasyCopy)
 
 - (BOOL)cjg_easyShallowCopy:(NSObject *)instance
 {

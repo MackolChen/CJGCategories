@@ -1,6 +1,6 @@
 //
 //  NSObject+CJGReflection.m
-//  NSObject-JKReflection
+//  NSObject-CJGReflection
 //
 //  Created by Jakey on 15/12/22.
 //  Copyright © 2015年 Jakey. All rights reserved.
@@ -9,7 +9,7 @@
 #import "NSObject+CJGReflection.h"
 #import <objc/runtime.h>
 
-@implementation NSObject (JKReflection)
+@implementation NSObject (CJGReflection)
 - (NSString *)cjg_className
 {
     return NSStringFromClass([self class]);

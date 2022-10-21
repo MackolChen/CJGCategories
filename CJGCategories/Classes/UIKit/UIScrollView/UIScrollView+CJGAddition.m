@@ -1,6 +1,6 @@
 //
 //  UIScrollView+CJGAddition.m
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 14/12/30.
 //  Copyright (c) 2014年 www.skyfox.org. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import "UIScrollView+CJGAddition.h"
 
-@implementation UIScrollView (JKAddition)
+@implementation UIScrollView (CJGAddition)
 //frame
 - (CGFloat)cjg_contentWidth {
     return self.contentSize.width;
@@ -53,29 +53,29 @@
 {
     return CGPointMake(self.contentSize.width + self.contentInset.right - self.bounds.size.width, 0.0f);
 }
-- (JKScrollDirection)cjg_ScrollDirection
+- (CJGScrollDirection)cjg_ScrollDirection
 {
-    JKScrollDirection direction;
+    CJGScrollDirection direction;
     
     if ([self.panGestureRecognizer translationInView:self.superview].y > 0.0f)
     {
-        direction = JKScrollDirectionUp;
+        direction = CJGScrollDirectionUp;
     }
     else if ([self.panGestureRecognizer translationInView:self.superview].y < 0.0f)
     {
-        direction = JKScrollDirectionDown;
+        direction = CJGScrollDirectionDown;
     }
     else if ([self.panGestureRecognizer translationInView:self].x < 0.0f)
     {
-        direction = JKScrollDirectionLeft;
+        direction = CJGScrollDirectionLeft;
     }
     else if ([self.panGestureRecognizer translationInView:self].x > 0.0f)
     {
-        direction = JKScrollDirectionRight;
+        direction = CJGScrollDirectionRight;
     }
     else
     {
-        direction = JKScrollDirectionWTF;
+        direction = CJGScrollDirectionWTF;
     }
     
     return direction;

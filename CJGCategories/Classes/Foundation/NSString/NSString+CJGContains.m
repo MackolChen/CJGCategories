@@ -1,6 +1,6 @@
 //
 //  NSString+Contains.m
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by 符现超 on 15/5/9.
 //  Copyright (c) 2015年 http://weibo.com/u/1655766025 All rights reserved.
@@ -8,7 +8,7 @@
 
 #import "NSString+CJGContains.h"
 
-@implementation NSString (JKContains)
+@implementation NSString (CJGContains)
 
 /**
  *  @brief  判断URL中是否包含中文

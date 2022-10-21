@@ -35,7 +35,7 @@
 #import "NSObject+CJGBlockTimer.h"
 
 
-@implementation NSObject (JKBlockTimer)
+@implementation NSObject (CJGBlockTimer)
 
 -(void)cjg_logTimeTakenToRunBlock:(void (^)(void)) block withPrefix:(NSString*) prefixString {
 	

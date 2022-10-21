@@ -11,13 +11,13 @@
 
 #define kSDMaxCacheFileAmount 100
 
-@implementation NSData (JKDataCache)
+@implementation NSData (CJGDataCache)
 
 + (NSString *)cjg_cachePath
 {
     NSString *path = [NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) lastObject];
     path = [path stringByAppendingPathComponent:@"Caches"];
-    path = [path stringByAppendingPathComponent:@"JKDataCache"];
+    path = [path stringByAppendingPathComponent:@"CJGDataCache"];
     if (![[NSFileManager defaultManager] fileExistsAtPath:path]) {
         [[NSFileManager defaultManager] createDirectoryAtPath:path withIntermediateDirectories:YES attributes:nil error:nil];
     }

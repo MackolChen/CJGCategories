@@ -14,7 +14,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSTimer (JKBlocks)
-+(id)cjg_scheduledTimerWithTimeInterval:(NSTimeInterval)inTimeInterval block:(void (^)())inBlock repeats:(BOOL)inRepeats;
-+(id)cjg_timerWithTimeInterval:(NSTimeInterval)inTimeInterval block:(void (^)())inBlock repeats:(BOOL)inRepeats;
+@interface NSTimer (CJGBlocks)
++(id)cjg_scheduledTimerWithTimeInterval:(NSTimeInterval)inTimeInterval block:(void (^)(void))inBlock repeats:(BOOL)inRepeats;
++(id)cjg_timerWithTimeInterval:(NSTimeInterval)inTimeInterval block:(void (^)(void))inBlock repeats:(BOOL)inRepeats;
 @end

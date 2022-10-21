@@ -28,13 +28,13 @@
 #import "NSObject+CJGKVOBlocks.h"
 #import <objc/runtime.h>
 
-@implementation NSObject (JKKVOBlocks)
+@implementation NSObject (CJGKVOBlocks)
 
 -(void)cjg_addObserver:(NSObject *)observer
         forKeyPath:(NSString *)keyPath
            options:(NSKeyValueObservingOptions)options
            context:(void *)context
-         withBlock:(JKKVOBlock)block {
+         withBlock:(CJGKVOBlock)block {
     
     objc_setAssociatedObject(observer, (__bridge const void *)(keyPath), block, OBJC_ASSOCIATION_COPY);
     [self addObserver:observer forKeyPath:keyPath options:options context:context];
@@ -51,14 +51,14 @@
                        change:(NSDictionary *)change
                       context:(void *)context {
     
-    JKKVOBlock block = objc_getAssociatedObject(self, (__bridge const void *)(keyPath));
+    CJGKVOBlock block = objc_getAssociatedObject(self, (__bridge const void *)(keyPath));
     block(change, context);
 }
 
 -(void)cjg_addObserverForKeyPath:(NSString *)keyPath
                      options:(NSKeyValueObservingOptions)options
                      context:(void *)context
-                   withBlock:(JKKVOBlock)block {
+                   withBlock:(CJGKVOBlock)block {
     
     [self cjg_addObserver:self forKeyPath:keyPath options:options context:context withBlock:block];
 }

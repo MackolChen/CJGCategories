@@ -1,6 +1,6 @@
 //
 //  NSArray+Block.m
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 14/12/15.
 //  Copyright (c) 2014年 www.skyfox.org. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import "NSArray+CJGBlock.h"
 
-@implementation NSArray (JKBlock)
+@implementation NSArray (CJGBlock)
 - (void)cjg_each:(void (^)(id object))block {
     [self enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         block(obj);

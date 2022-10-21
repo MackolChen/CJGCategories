@@ -1,6 +1,6 @@
 //
 //  UIScrollView+CJGPages.h
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 14/12/30.
 //  Copyright (c) 2014年 www.skyfox.org. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIScrollView (JKPages)
+@interface UIScrollView (CJGPages)
 - (NSInteger)cjg_pages;
 - (NSInteger)cjg_currentPage;
 - (CGFloat)cjg_scrollPercent;

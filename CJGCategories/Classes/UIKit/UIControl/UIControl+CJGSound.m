@@ -12,7 +12,7 @@
 // Key for the dictionary of sounds for control events.
 static char const * const cjg_kSoundsKey = "cjg_kSoundsKey";
 
-@implementation UIControl (JKSound)
+@implementation UIControl (CJGSound)
 
 - (void)cjg_setSoundNamed:(NSString *)name forControlEvent:(UIControlEvents)controlEvent
 {

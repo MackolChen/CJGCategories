@@ -17,7 +17,7 @@
  */
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-@interface NSString (JKEmoji)
+@interface NSString (CJGEmoji)
 
 /**
  Returns a NSString in which any occurrences that match the cheat codes

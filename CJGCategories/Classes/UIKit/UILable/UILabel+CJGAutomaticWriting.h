@@ -18,31 +18,31 @@ extern NSTimeInterval const UILabelAWDefaultDuration;
 
 extern unichar const UILabelAWDefaultCharacter;
 
-typedef NS_ENUM(NSInteger, UILabelJKlinkingMode)
+typedef NS_ENUM(NSInteger, UILabelCJGlinkingMode)
 {
-    UILabelJKlinkingModeNone,
-    UILabelJKlinkingModeUntilFinish,
-    UILabelJKlinkingModeUntilFinishKeeping,
-    UILabelJKlinkingModeWhenFinish,
-    UILabelJKlinkingModeWhenFinishShowing,
-    UILabelJKlinkingModeAlways
+    UILabelCJGlinkingModeNone,
+    UILabelCJGlinkingModeUntilFinish,
+    UILabelCJGlinkingModeUntilFinishKeeping,
+    UILabelCJGlinkingModeWhenFinish,
+    UILabelCJGlinkingModeWhenFinishShowing,
+    UILabelCJGlinkingModeAlways
 };
 
-@interface UILabel (JKAutomaticWriting)
+@interface UILabel (CJGAutomaticWriting)
 
 @property (strong, nonatomic) NSOperationQueue *cjg_automaticWritingOperationQueue;
 @property (assign, nonatomic) UIEdgeInsets cjg_edgeInsets;
 
 - (void)cjg_setTextWithAutomaticWritingAnimation:(NSString *)text;
 
-- (void)cjg_setText:(NSString *)text automaticWritingAnimationWithBlinkingMode:(UILabelJKlinkingMode)blinkingMode;
+- (void)cjg_setText:(NSString *)text automaticWritingAnimationWithBlinkingMode:(UILabelCJGlinkingMode)blinkingMode;
 
 - (void)cjg_setText:(NSString *)text automaticWritingAnimationWithDuration:(NSTimeInterval)duration;
 
-- (void)cjg_setText:(NSString *)text automaticWritingAnimationWithDuration:(NSTimeInterval)duration blinkingMode:(UILabelJKlinkingMode)blinkingMode;
+- (void)cjg_setText:(NSString *)text automaticWritingAnimationWithDuration:(NSTimeInterval)duration blinkingMode:(UILabelCJGlinkingMode)blinkingMode;
 
-- (void)cjg_setText:(NSString *)text automaticWritingAnimationWithDuration:(NSTimeInterval)duration blinkingMode:(UILabelJKlinkingMode)blinkingMode blinkingCharacter:(unichar)blinkingCharacter;
+- (void)cjg_setText:(NSString *)text automaticWritingAnimationWithDuration:(NSTimeInterval)duration blinkingMode:(UILabelCJGlinkingMode)blinkingMode blinkingCharacter:(unichar)blinkingCharacter;
 
-- (void)cjg_setText:(NSString *)text automaticWritingAnimationWithDuration:(NSTimeInterval)duration blinkingMode:(UILabelJKlinkingMode)blinkingMode blinkingCharacter:(unichar)blinkingCharacter completion:(void (^)(void))completion;
+- (void)cjg_setText:(NSString *)text automaticWritingAnimationWithDuration:(NSTimeInterval)duration blinkingMode:(UILabelCJGlinkingMode)blinkingMode blinkingCharacter:(unichar)blinkingCharacter completion:(void (^)(void))completion;
 
 @end

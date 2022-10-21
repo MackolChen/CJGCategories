@@ -8,9 +8,9 @@
 //https://github.com/pzearfoss/NSNumber-RomanNumerals
 #import <Foundation/Foundation.h>
 
-@interface NSNumber (JKRomanNumerals)
+@interface NSNumber (CJGRomanNumerals)
 /**
- *  @author JKCategories
+ *  @author CJGCategories
  *
  *   A category on NSNumber that returns the value as a roman numeral 
  *

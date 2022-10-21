@@ -1,6 +1,6 @@
 //
 //  UIImage+CJGOrientation.m
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 15/1/4.
 //  Copyright (c) 2015年 www.skyfox.org. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import "UIImage+CJGOrientation.h"
 
-@implementation UIImage (JKOrientation)
+@implementation UIImage (CJGOrientation)
 /**
  *  @brief  修正图片的方向
  *
@@ -113,7 +113,7 @@
 /**
  *  @brief  旋转图片
  *
- *  @param degrees 弧度
+ *  @param radians 弧度
  *
  *  @return 旋转后图片
  */

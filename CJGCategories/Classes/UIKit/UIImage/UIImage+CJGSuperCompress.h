@@ -1,6 +1,6 @@
 //
 //  UIImage+SuperCompress.h
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 16/1/22.
 //  Copyright © 2016年 Jakey. All rights reserved.
@@ -10,7 +10,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIImage (JKSuperCompress)
+@interface UIImage (CJGSuperCompress)
 /**
  *  压缩上传图片到指定字节
  *

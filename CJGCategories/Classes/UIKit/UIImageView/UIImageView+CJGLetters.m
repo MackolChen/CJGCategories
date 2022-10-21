@@ -27,7 +27,7 @@
 // This multiplier sets the font size based on the view bounds
 static const CGFloat cjg_FontResizingProportion = 0.42f;
 
-@interface UIImageView (JKLettersPrivate)
+@interface UIImageView (CJGLettersPrivate)
 
 - (UIImage *)cjg_imageSnapshotFromText:(NSString *)text backgroundColor:(UIColor *)color circular:(BOOL)isCircular textAttributes:(NSDictionary *)attributes;
 

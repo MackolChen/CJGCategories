@@ -7,7 +7,7 @@
 //
 #import "NSString+CJGRemoveEmoji.h"
 
-@implementation NSString (JKRemoveEmoji)
+@implementation NSString (CJGRemoveEmoji)
 /**
  *  @brief  是否包含emoji
  *

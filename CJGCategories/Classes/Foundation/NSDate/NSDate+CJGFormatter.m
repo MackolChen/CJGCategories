@@ -1,6 +1,6 @@
 //
 //  NSDate+Formatter.m
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 15/5/23.
 //  Copyright (c) 2015年 www.skyfox.org. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import "NSDate+CJGFormatter.h"
 
-@implementation NSDate (JKFormatter)
+@implementation NSDate (CJGFormatter)
 +(NSDateFormatter *)cjg_formatter {
     
     static NSDateFormatter *formatter = nil;

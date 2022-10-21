@@ -1,6 +1,6 @@
 //
 //  UIColor+Web.m
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 14/12/22.
 //  Copyright (c) 2014年 www.skyfox.org. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import "UIColor+CJGWeb.h"
 
-@implementation UIColor (JKWeb)
+@implementation UIColor (CJGWeb)
 /**
  *  @brief  获取canvas用的颜色字符串
  *

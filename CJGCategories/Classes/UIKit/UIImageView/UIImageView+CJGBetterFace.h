@@ -10,7 +10,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIImageView (JKBetterFace)
+@interface UIImageView (CJGBetterFace)
 
 @property (nonatomic) BOOL cjg_needsBetterFace;
 @property (nonatomic) BOOL cjg_fast;

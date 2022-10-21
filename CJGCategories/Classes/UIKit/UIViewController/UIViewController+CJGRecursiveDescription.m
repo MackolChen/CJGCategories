@@ -8,7 +8,7 @@
 
 #import "UIViewController+CJGRecursiveDescription.h"
 
-@implementation UIViewController (JKRecursiveDescription)
+@implementation UIViewController (CJGRecursiveDescription)
 /**
  *  @brief  视图层级
  *

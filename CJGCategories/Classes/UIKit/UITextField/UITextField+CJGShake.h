@@ -10,12 +10,12 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSInteger, JKShakedDirection) {
-    JKShakedDirectionHorizontal,
-    JKShakedDirectionVertical
+typedef NS_ENUM(NSInteger, CJGShakedDirection) {
+    CJGShakedDirectionHorizontal,
+    CJGShakedDirectionVertical
 };
 
-@interface UITextField (JKShake)
+@interface UITextField (CJGShake)
 
 /**-----------------------------------------------------------------------------
  * @name UITextField+Shake
@@ -45,7 +45,7 @@ typedef NS_ENUM(NSInteger, JKShakedDirection) {
  * @param delta The width of the shake
  * @param handler A block object to be executed when the shake sequence ends
  */
-- (void)cjg_shake:(int)times withDelta:(CGFloat)delta completion:(void((^)()))handler;
+- (void)cjg_shake:(int)times withDelta:(CGFloat)delta completion:(void((^)(void)))handler;
 
 /** Shake the UITextField at a custom speed
  *
@@ -66,7 +66,7 @@ typedef NS_ENUM(NSInteger, JKShakedDirection) {
  * @param interval The duration of one shake
  * @param handler A block object to be executed when the shake sequence ends
  */
-- (void)cjg_shake:(int)times withDelta:(CGFloat)delta speed:(NSTimeInterval)interval completion:(void((^)()))handler;
+- (void)cjg_shake:(int)times withDelta:(CGFloat)delta speed:(NSTimeInterval)interval completion:(void((^)(void)))handler;
 
 /** Shake the UITextField at a custom speed
  *
@@ -75,9 +75,9 @@ typedef NS_ENUM(NSInteger, JKShakedDirection) {
  * @param times The number of shakes
  * @param delta The width of the shake
  * @param interval The duration of one shake
- * @param direction of the shake
+ * @param shakeDirection of the shake
  */
-- (void)cjg_shake:(int)times withDelta:(CGFloat)delta speed:(NSTimeInterval)interval shakeDirection:(JKShakedDirection)shakeDirection;
+- (void)cjg_shake:(int)times withDelta:(CGFloat)delta speed:(NSTimeInterval)interval shakeDirection:(CJGShakedDirection)shakeDirection;
 
 /** Shake the UITextField at a custom speed
  *
@@ -86,9 +86,9 @@ typedef NS_ENUM(NSInteger, JKShakedDirection) {
  * @param times The number of shakes
  * @param delta The width of the shake
  * @param interval The duration of one shake
- * @param direction of the shake
+ * @param shakeDirection of the shake
  * @param handler A block object to be executed when the shake sequence ends
  */
-- (void)cjg_shake:(int)times withDelta:(CGFloat)delta speed:(NSTimeInterval)interval shakeDirection:(JKShakedDirection)shakeDirection completion:(void((^)()))handler;
+- (void)cjg_shake:(int)times withDelta:(CGFloat)delta speed:(NSTimeInterval)interval shakeDirection:(CJGShakedDirection)shakeDirection completion:(void((^)(void)))handler;
 
 @end

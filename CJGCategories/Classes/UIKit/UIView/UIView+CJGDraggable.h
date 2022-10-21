@@ -11,7 +11,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIView (JKDraggable)
+@interface UIView (CJGDraggable)
 
 /**-----------------------------------------------------------------------------
  * @name UIView+draggable Properties
@@ -20,7 +20,6 @@
 
 /** The pan gestures that handles the view dragging
  *
- * @param panGesture The tint color of the blurred view. Set to nil to reset.
  */
 @property (nonatomic) UIPanGestureRecognizer *cjg_panGesture;
 
@@ -57,12 +56,12 @@
 /**
  Notifies when dragging started
  */
-@property (nonatomic, copy) void (^cjg_draggingStartedBlock)();
+@property (nonatomic, copy) void (^cjg_draggingStartedBlock)(void);
 
 /**
  Notifies when dragging ended
  */
-@property (nonatomic, copy) void (^cjg_draggingEndedBlock)();
+@property (nonatomic, copy) void (^cjg_draggingEndedBlock)(void);
 
 
 /**-----------------------------------------------------------------------------

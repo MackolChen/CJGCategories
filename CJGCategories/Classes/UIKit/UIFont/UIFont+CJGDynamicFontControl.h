@@ -22,7 +22,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIFont (JKDynamicFontControl)
+@interface UIFont (CJGDynamicFontControl)
 
 
 +(UIFont *)cjg_preferredFontForTextStyle:(NSString *)style withFontName:(NSString *)fontName scale:(CGFloat)scale;

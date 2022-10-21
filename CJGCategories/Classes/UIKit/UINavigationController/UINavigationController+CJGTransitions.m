@@ -28,7 +28,7 @@
 
 #import "UINavigationController+CJGTransitions.h"
 
-@implementation UINavigationController (JKTransitions)
+@implementation UINavigationController (CJGTransitions)
 
 - (void)cjg_pushViewController:(UIViewController *)controller withTransition:(UIViewAnimationTransition)transition {
     [UIView beginAnimations:nil context:NULL];

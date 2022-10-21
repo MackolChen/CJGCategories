@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIApplication (JKNetworkActivityIndicator)
+@interface UIApplication (CJGNetworkActivityIndicator)
 
 /*
  This category will automatically keep track of concurrent network activity and display the network activity indicator accordingly.

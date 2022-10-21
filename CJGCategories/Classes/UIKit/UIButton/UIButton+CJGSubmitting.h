@@ -9,7 +9,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIButton (JKSubmitting)
+@interface UIButton (CJGSubmitting)
 
 /**
  *  @author foxsofter, 15-04-02 15:04:59
@@ -32,6 +32,6 @@
  *
  *  @brief  按钮是否正在提交中
  */
-@property(nonatomic, readonly, getter=isJKSubmitting) NSNumber *cjg_submitting;
+@property(nonatomic, readonly, getter=isCJGSubmitting) NSNumber *cjg_submitting;
 
 @end

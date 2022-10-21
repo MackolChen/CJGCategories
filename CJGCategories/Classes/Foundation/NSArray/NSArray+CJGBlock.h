@@ -1,6 +1,6 @@
 //
 //  NSArray+Block.h
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 14/12/15.
 //  Copyright (c) 2014年 www.skyfox.org. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSArray (JKBlock)
+@interface NSArray (CJGBlock)
 - (void)cjg_each:(void (^)(id object))block;
 - (void)cjg_eachWithIndex:(void (^)(id object, NSUInteger index))block;
 - (NSArray *)cjg_map:(id (^)(id object))block;

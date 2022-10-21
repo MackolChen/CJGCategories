@@ -10,7 +10,7 @@
 #import "CLLocation+CJGCH1903.h"
 
 
-@implementation CLLocation (JKCH1903)
+@implementation CLLocation (CJGCH1903)
 
 
 - (id) initWithCH1903x:(double)x y:(double)y

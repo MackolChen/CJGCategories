@@ -8,7 +8,7 @@
 
 #import "NSString+CJGEmoji.h"
 
-@implementation NSString (JKEmoji)
+@implementation NSString (CJGEmoji)
 
 static NSDictionary * cjg_s_unicodeToCheatCodes = nil;
 static NSDictionary * cjg_s_cheatCodesToUnicode = nil;

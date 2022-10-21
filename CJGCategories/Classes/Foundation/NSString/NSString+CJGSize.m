@@ -1,6 +1,6 @@
 //
 //  NSString+CJGSize.m
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 15/5/22.
 //  Copyright (c) 2015年 www.skyfox.org. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import "NSString+CJGSize.h"
 
-@implementation NSString (JKSize)
+@implementation NSString (CJGSize)
 /**
  *  @brief 计算文字的高度
  *

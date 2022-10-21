@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UINavigationBar (JKAwesome)
+@interface UINavigationBar (CJGAwesome)
 - (void)cjg_setBackgroundColor:(UIColor *)backgroundColor;
 - (void)cjg_setElementsAlpha:(CGFloat)alpha;
 - (void)cjg_setTranslationY:(CGFloat)translationY;

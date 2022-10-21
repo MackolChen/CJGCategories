@@ -1,6 +1,6 @@
 //
 //  UIImage+CJGOrientation.h
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 15/1/4.
 //  Copyright (c) 2015年 www.skyfox.org. All rights reserved.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 //CGFloat DegreesToRadiansForOrientation(CGFloat degrees) {return degrees * M_PI / 180;};
 //CGFloat RadiansToDegreesForOrientation(CGFloat radians) {return radians * 180/M_PI;};
-@interface UIImage (JKOrientation)
+@interface UIImage (CJGOrientation)
 /**
  *  @brief  修正图片的方向
  *
@@ -30,7 +30,7 @@
 /**
  *  @brief  旋转图片
  *
- *  @param degrees 弧度
+ *  @param radians 弧度
  *
  *  @return 旋转后图片
  */

@@ -28,7 +28,7 @@
 
 static __weak id cjg_currentFirstResponder;
 
-@implementation UIResponder (JKFirstResponder)
+@implementation UIResponder (CJGFirstResponder)
 /**
  *  @brief  当前第一响应者
  *

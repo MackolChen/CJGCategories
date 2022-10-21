@@ -1,6 +1,6 @@
 //
 //  NSData+CJGHash.m
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 15/6/1.
 //  Copyright (c) 2015年 www.skyfox.org. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import "NSData+CJGHash.h"
 #include <CommonCrypto/CommonCrypto.h>
-@implementation NSData (JKHash)
+@implementation NSData (CJGHash)
 /**
  *  @brief  md5 NSData
  */

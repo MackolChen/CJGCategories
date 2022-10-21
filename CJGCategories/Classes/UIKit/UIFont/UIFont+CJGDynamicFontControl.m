@@ -7,7 +7,7 @@
 
 #import "UIFont+CJGDynamicFontControl.h"
 
-@implementation UIFont (JKDynamicFontControl)
+@implementation UIFont (CJGDynamicFontControl)
 
 +(UIFont *)cjg_preferredFontForTextStyle:(NSString *)style withFontName:(NSString *)fontName{
     return [UIFont cjg_preferredFontForTextStyle:style withFontName:fontName scale:1.0f];

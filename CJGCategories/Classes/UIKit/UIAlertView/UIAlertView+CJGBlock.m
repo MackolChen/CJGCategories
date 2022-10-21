@@ -1,6 +1,6 @@
 //
 //  UIAlertView+Block.m
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by 符现超 on 15/5/9.
 //  Copyright (c) 2015年 http://weibo.com/u/1655766025 All rights reserved.
@@ -11,7 +11,7 @@
 
 static NSString *UIAlertViewKey = @"UIAlertViewKey";
 
-@implementation UIAlertView (JKBlock)
+@implementation UIAlertView (CJGBlock)
 
 /**
  
@@ -28,7 +28,7 @@ static NSString *UIAlertViewKey = @"UIAlertViewKey";
  
  */
 
-+ (void)cjg_alertWithCallBackBlock:(UIAlertViewJKCallBackBlock)alertViewCallBackBlock title:(NSString *)title message:(NSString *)message  cancelButtonName:(NSString *)cancelButtonName otherButtonTitles:(NSString *)otherButtonTitles, ...NS_REQUIRES_NIL_TERMINATION {
++ (void)cjg_alertWithCallBackBlock:(UIAlertViewCJGCallBackBlock)alertViewCallBackBlock title:(NSString *)title message:(NSString *)message  cancelButtonName:(NSString *)cancelButtonName otherButtonTitles:(NSString *)otherButtonTitles, ...NS_REQUIRES_NIL_TERMINATION {
     
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:message delegate:nil cancelButtonTitle:cancelButtonName otherButtonTitles: otherButtonTitles, nil];
     NSString *other = nil;
@@ -46,14 +46,14 @@ static NSString *UIAlertViewKey = @"UIAlertViewKey";
 }
 
 
-- (void)setCjg_alertViewCallBackBlock:(UIAlertViewJKCallBackBlock)alertViewCallBackBlock {
+- (void)setCjg_alertViewCallBackBlock:(UIAlertViewCJGCallBackBlock)alertViewCallBackBlock {
     
     [self willChangeValueForKey:@"callbackBlock"];
     objc_setAssociatedObject(self, &UIAlertViewKey, alertViewCallBackBlock, OBJC_ASSOCIATION_COPY);
     [self didChangeValueForKey:@"callbackBlock"];
 }
 
-- (UIAlertViewJKCallBackBlock)cjg_alertViewCallBackBlock {
+- (UIAlertViewCJGCallBackBlock)cjg_alertViewCallBackBlock {
     
     return objc_getAssociatedObject(self, &UIAlertViewKey);
 }

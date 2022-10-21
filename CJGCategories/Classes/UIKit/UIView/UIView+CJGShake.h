@@ -7,12 +7,12 @@
 //  https://github.com/andreamazz/UIView-Shake
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-typedef NS_ENUM(NSInteger, JKShakeDirection) {
-    JKShakeDirectionHorizontal = 0,
-    JKShakeDirectionVertical
+typedef NS_ENUM(NSInteger, CJGShakeDirection) {
+    CJGShakeDirectionHorizontal = 0,
+    CJGShakeDirectionVertical
 };
 
-@interface UIView (JKShake)
+@interface UIView (CJGShake)
 
 /**-----------------------------------------------------------------------------
  * @name UIView+Shake
@@ -42,7 +42,7 @@ typedef NS_ENUM(NSInteger, JKShakeDirection) {
  * @param delta The width of the shake
  * @param handler A block object to be executed when the shake sequence ends
  */
-- (void)cjg_shake:(int)times withDelta:(CGFloat)delta completion:(void((^)()))handler;
+- (void)cjg_shake:(int)times withDelta:(CGFloat)delta completion:(void((^)(void)))handler;
 
 /** Shake the UIView at a custom speed
  *
@@ -63,7 +63,7 @@ typedef NS_ENUM(NSInteger, JKShakeDirection) {
  * @param interval The duration of one shake
  * @param handler A block object to be executed when the shake sequence ends
  */
-- (void)cjg_shake:(int)times withDelta:(CGFloat)delta speed:(NSTimeInterval)interval completion:(void((^)()))handler;
+- (void)cjg_shake:(int)times withDelta:(CGFloat)delta speed:(NSTimeInterval)interval completion:(void((^)(void)))handler;
 
 /** Shake the UIView at a custom speed
  *
@@ -72,9 +72,9 @@ typedef NS_ENUM(NSInteger, JKShakeDirection) {
  * @param times The number of shakes
  * @param delta The width of the shake
  * @param interval The duration of one shake
- * @param direction of the shake
+ * @param shakeDirection of the shake
  */
-- (void)cjg_shake:(int)times withDelta:(CGFloat)delta speed:(NSTimeInterval)interval shakeDirection:(JKShakeDirection)shakeDirection;
+- (void)cjg_shake:(int)times withDelta:(CGFloat)delta speed:(NSTimeInterval)interval shakeDirection:(CJGShakeDirection)shakeDirection;
 
 /** Shake the UIView at a custom speed
  *
@@ -83,9 +83,9 @@ typedef NS_ENUM(NSInteger, JKShakeDirection) {
  * @param times The number of shakes
  * @param delta The width of the shake
  * @param interval The duration of one shake
- * @param direction of the shake
+ * @param shakeDirection of the shake
  * @param completion to be called when the view is done shaking
  */
-- (void)cjg_shake:(int)times withDelta:(CGFloat)delta speed:(NSTimeInterval)interval shakeDirection:(JKShakeDirection)shakeDirection completion:(void(^)(void))completion;
+- (void)cjg_shake:(int)times withDelta:(CGFloat)delta speed:(NSTimeInterval)interval shakeDirection:(CJGShakeDirection)shakeDirection completion:(void(^)(void))completion;
 
 @end

@@ -29,9 +29,9 @@
 
 #import <CoreData/CoreData.h>
 
-@interface NSManagedObject (JKDictionary)
+@interface NSManagedObject (CJGDictionary)
 /**
- *  @author JKCategories
+ *  @author CJGCategories
  *
  *  cjg_toDictionary
  *
@@ -40,7 +40,7 @@
 - (NSDictionary *)cjg_toDictionary;
 //http://stackoverflow.com/questions/5664423/storing-nsmanagedobject-in-a-dictionary-nsdictionary
 /**
- *  @author JKCategories
+ *  @author CJGCategories
  *
  *  cjg_dictionary
  *

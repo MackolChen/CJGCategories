@@ -10,7 +10,7 @@
 @interface NSManagedObjectContext ()
 @end
 
-@implementation NSManagedObjectContext(JKFetchRequestsConstructors)
+@implementation NSManagedObjectContext(CJGFetchRequestsConstructors)
 #pragma mark - Constructors
 - (NSFetchRequest*)cjg_fetchRequestForEntityObject:(NSString*)entityName usingValue:(id)value forKey:(NSString*)key returningAsFault:(BOOL)fault
 {

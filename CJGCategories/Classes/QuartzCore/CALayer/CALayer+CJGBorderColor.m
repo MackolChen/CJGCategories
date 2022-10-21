@@ -8,7 +8,7 @@
 
 #import "CALayer+CJGBorderColor.h"
 
-@implementation CALayer (JKBorderColor)
+@implementation CALayer (CJGBorderColor)
 
 -(void)setCjg_borderColor:(UIColor *)cjg_borderColor{
     self.borderColor = cjg_borderColor.CGColor;

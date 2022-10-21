@@ -7,7 +7,7 @@
 
 #import "NSManagedObjectContext+CJGObjectClear.h"
 
-@implementation NSManagedObjectContext (JKObjectClear)
+@implementation NSManagedObjectContext (CJGObjectClear)
 #pragma mark - Utils
 - (void)cjg_deleteObjects:(id <NSFastEnumeration>)objects
 {

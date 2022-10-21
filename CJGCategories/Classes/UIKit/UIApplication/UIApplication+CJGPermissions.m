@@ -18,17 +18,17 @@
 #import <CoreMotion/CoreMotion.h>
 #import <EventKit/EventKit.h>
 
-typedef void (^JKLocationSuccessCallback)(void);
-typedef void (^JKLocationFailureCallback)(void);
+typedef void (^CJGLocationSuccessCallback)(void);
+typedef void (^CJGLocationFailureCallback)(void);
 
-static char JKPermissionsLocationManagerPropertyKey;
-static char JKPermissionsLocationBlockSuccessPropertyKey;
-static char JKPermissionsLocationBlockFailurePropertyKey;
+static char CJGPermissionsLocationManagerPropertyKey;
+static char CJGPermissionsLocationBlockSuccessPropertyKey;
+static char CJGPermissionsLocationBlockFailurePropertyKey;
 
 @interface UIApplication () <CLLocationManagerDelegate>
 @property (nonatomic, retain) CLLocationManager *cjg_permissionsLocationManager;
-@property (nonatomic, copy) JKLocationSuccessCallback cjg_locationSuccessCallbackProperty;
-@property (nonatomic, copy) JKLocationFailureCallback cjg_locationFailureCallbackProperty;
+@property (nonatomic, copy) CJGLocationSuccessCallback cjg_locationSuccessCallbackProperty;
+@property (nonatomic, copy) CJGLocationFailureCallback cjg_locationFailureCallbackProperty;
 @end
 
 
@@ -36,122 +36,122 @@ static char JKPermissionsLocationBlockFailurePropertyKey;
 
 
 #pragma mark - Check permissions
--(JKPermissionAccess)hasAccessToBluetoothLE {
+-(CJGPermissionAccess)hasAccessToBluetoothLE {
     switch ([[[CBCentralManager alloc] init] state]) {
         case CBCentralManagerStateUnsupported:
-            return JKPermissionAccessUnsupported;
+            return CJGPermissionAccessUnsupported;
             break;
             
         case CBCentralManagerStateUnauthorized:
-            return JKPermissionAccessDenied;
+            return CJGPermissionAccessDenied;
             break;
             
         default:
-            return JKPermissionAccessGranted;
+            return CJGPermissionAccessGranted;
             break;
     }
 }
 
--(JKPermissionAccess)hasAccessToCalendar {
+-(CJGPermissionAccess)hasAccessToCalendar {
     switch ([EKEventStore authorizationStatusForEntityType:EKEntityTypeEvent]) {
         case EKAuthorizationStatusAuthorized:
-            return JKPermissionAccessGranted;
+            return CJGPermissionAccessGranted;
             break;
             
         case EKAuthorizationStatusDenied:
-            return JKPermissionAccessDenied;
+            return CJGPermissionAccessDenied;
             break;
             
         case EKAuthorizationStatusRestricted:
-            return JKPermissionAccessRestricted;
+            return CJGPermissionAccessRestricted;
             break;
             
         default:
-            return JKPermissionAccessUnknown;
+            return CJGPermissionAccessUnknown;
             break;
     }
 }
 
--(JKPermissionAccess)hasAccessToContacts {
+-(CJGPermissionAccess)hasAccessToContacts {
     switch (ABAddressBookGetAuthorizationStatus()) {
         case kABAuthorizationStatusAuthorized:
-            return JKPermissionAccessGranted;
+            return CJGPermissionAccessGranted;
             break;
             
         case kABAuthorizationStatusDenied:
-            return JKPermissionAccessDenied;
+            return CJGPermissionAccessDenied;
             break;
             
         case kABAuthorizationStatusRestricted:
-            return JKPermissionAccessRestricted;
+            return CJGPermissionAccessRestricted;
             break;
             
         default:
-            return JKPermissionAccessUnknown;
+            return CJGPermissionAccessUnknown;
             break;
     }
 }
 
--(JKPermissionAccess)hasAccessToLocation {
+-(CJGPermissionAccess)hasAccessToLocation {
     switch ([CLLocationManager authorizationStatus]) {
         case kCLAuthorizationStatusAuthorized:
-            return JKPermissionAccessGranted;
+            return CJGPermissionAccessGranted;
             break;
             
         case kCLAuthorizationStatusDenied:
-            return JKPermissionAccessDenied;
+            return CJGPermissionAccessDenied;
             break;
             
         case kCLAuthorizationStatusRestricted:
-            return JKPermissionAccessRestricted;
+            return CJGPermissionAccessRestricted;
             break;
             
         default:
-            return JKPermissionAccessUnknown;
+            return CJGPermissionAccessUnknown;
             break;
     }
-    return JKPermissionAccessUnknown;
+    return CJGPermissionAccessUnknown;
 }
 
--(JKPermissionAccess)hasAccessToPhotos {
+-(CJGPermissionAccess)hasAccessToPhotos {
     switch ([ALAssetsLibrary authorizationStatus]) {
         case ALAuthorizationStatusAuthorized:
-            return JKPermissionAccessGranted;
+            return CJGPermissionAccessGranted;
             break;
             
         case ALAuthorizationStatusDenied:
-            return JKPermissionAccessDenied;
+            return CJGPermissionAccessDenied;
             break;
             
         case ALAuthorizationStatusRestricted:
-            return JKPermissionAccessRestricted;
+            return CJGPermissionAccessRestricted;
             break;
             
         default:
-            return JKPermissionAccessUnknown;
+            return CJGPermissionAccessUnknown;
             break;
     }
 }
 
--(JKPermissionAccess)hasAccessToReminders {
+-(CJGPermissionAccess)hasAccessToReminders {
     switch ([EKEventStore authorizationStatusForEntityType:EKEntityTypeReminder]) {
         case EKAuthorizationStatusAuthorized:
-            return JKPermissionAccessGranted;
+            return CJGPermissionAccessGranted;
             break;
             
         case EKAuthorizationStatusDenied:
-            return JKPermissionAccessDenied;
+            return CJGPermissionAccessDenied;
             break;
             
         case EKAuthorizationStatusRestricted:
-            return JKPermissionAccessRestricted;
+            return CJGPermissionAccessRestricted;
             break;
             
         default:
-            return JKPermissionAccessUnknown;
+            return CJGPermissionAccessUnknown;
             break;
     }
-    return JKPermissionAccessUnknown;
+    return CJGPermissionAccessUnknown;
 }
 
 
@@ -248,27 +248,27 @@ static char JKPermissionsLocationBlockFailurePropertyKey;
 
 #pragma mark - Location manager injection
 -(CLLocationManager *)cjg_permissionsLocationManager {
-    return objc_getAssociatedObject(self, &JKPermissionsLocationManagerPropertyKey);
+    return objc_getAssociatedObject(self, &CJGPermissionsLocationManagerPropertyKey);
 }
 
 -(void)setCjg_permissionsLocationManager:(CLLocationManager *)manager {
-    objc_setAssociatedObject(self, &JKPermissionsLocationManagerPropertyKey, manager, OBJC_ASSOCIATION_RETAIN);
+    objc_setAssociatedObject(self, &CJGPermissionsLocationManagerPropertyKey, manager, OBJC_ASSOCIATION_RETAIN);
 }
 
--(JKLocationSuccessCallback)locationSuccessCallbackProperty {
-    return objc_getAssociatedObject(self, &JKPermissionsLocationBlockSuccessPropertyKey);
+-(CJGLocationSuccessCallback)locationSuccessCallbackProperty {
+    return objc_getAssociatedObject(self, &CJGPermissionsLocationBlockSuccessPropertyKey);
 }
 
--(void)setCjg_locationSuccessCallbackProperty:(JKLocationSuccessCallback)locationCallbackProperty {
-    objc_setAssociatedObject(self, &JKPermissionsLocationBlockSuccessPropertyKey, locationCallbackProperty, OBJC_ASSOCIATION_COPY);
+-(void)setCjg_locationSuccessCallbackProperty:(CJGLocationSuccessCallback)locationCallbackProperty {
+    objc_setAssociatedObject(self, &CJGPermissionsLocationBlockSuccessPropertyKey, locationCallbackProperty, OBJC_ASSOCIATION_COPY);
 }
 
--(JKLocationFailureCallback)locationFailureCallbackProperty {
-    return objc_getAssociatedObject(self, &JKPermissionsLocationBlockFailurePropertyKey);
+-(CJGLocationFailureCallback)locationFailureCallbackProperty {
+    return objc_getAssociatedObject(self, &CJGPermissionsLocationBlockFailurePropertyKey);
 }
 
--(void)setCjg_locationFailureCallbackProperty:(JKLocationFailureCallback)locationFailureCallbackProperty {
-    objc_setAssociatedObject(self, &JKPermissionsLocationBlockFailurePropertyKey, locationFailureCallbackProperty, OBJC_ASSOCIATION_COPY);
+-(void)setCjg_locationFailureCallbackProperty:(CJGLocationFailureCallback)locationFailureCallbackProperty {
+    objc_setAssociatedObject(self, &CJGPermissionsLocationBlockFailurePropertyKey, locationFailureCallbackProperty, OBJC_ASSOCIATION_COPY);
 }
 
 

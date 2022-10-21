@@ -10,7 +10,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIImageView (JKReflect)
+@interface UIImageView (CJGReflect)
 /**
  *  @brief  倒影
  */

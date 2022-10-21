@@ -1,6 +1,6 @@
 //
 //  NSUserDefaults+SafeAccess.m
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 15/5/23.
 //  Copyright (c) 2015年 www.skyfox.org. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import "NSUserDefaults+CJGSafeAccess.h"
 
-@implementation NSUserDefaults (JKSafeAccess)
+@implementation NSUserDefaults (CJGSafeAccess)
 + (NSString *)cjg_stringForKey:(NSString *)defaultName {
     return [[NSUserDefaults standardUserDefaults] stringForKey:defaultName];
 }

@@ -30,7 +30,7 @@ static char kTextFieldHistoryviewIdentifyKey;
 @end
 
 
-@implementation UITextField (JKHistory)
+@implementation UITextField (CJGHistory)
 
 - (NSString*)cjg_identify {
     return objc_getAssociatedObject(self, &kTextFieldIdentifyKey);

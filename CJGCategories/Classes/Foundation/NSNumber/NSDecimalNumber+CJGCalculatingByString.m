@@ -26,7 +26,7 @@ NSArray* RPNFromTokens (NSArray *tokens);
 static NSArray *operators;
 void initOperators();
 
-@implementation NSDecimalNumber (JKCalculatingByString)
+@implementation NSDecimalNumber (CJGCalculatingByString)
 
 + (NSDecimalNumber *)cjg_decimalNumberWithEquation:(NSString *)equation decimalNumbers:(NSDictionary *)numbers
 {

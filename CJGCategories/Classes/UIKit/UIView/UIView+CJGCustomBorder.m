@@ -15,7 +15,7 @@ typedef NS_ENUM(NSInteger, EdgeType) {
     RightBorder = 40000
 };
 
-@implementation UIView (JKCustomBorder)
+@implementation UIView (CJGCustomBorder)
 
 
 - (void)cjg_removeTopBorder {
@@ -70,7 +70,7 @@ typedef NS_ENUM(NSInteger, EdgeType) {
 }
 
 
-- (void)cjg_addTopBorderWithColor:(UIColor *)color width:(CGFloat)borderWidth excludePoint:(CGFloat)point edgeType:(JKExcludePoint)edge {
+- (void)cjg_addTopBorderWithColor:(UIColor *)color width:(CGFloat)borderWidth excludePoint:(CGFloat)point edgeType:(CJGExcludePoint)edge {
     [self cjg_removeTopBorder];
     
     UIView *border = [[UIView alloc] init];
@@ -86,11 +86,11 @@ typedef NS_ENUM(NSInteger, EdgeType) {
     
     CGFloat startPoint = 0.0f;
     CGFloat endPoint = 0.0f;
-    if (edge & JKExcludeStartPoint) {
+    if (edge & CJGExcludeStartPoint) {
         startPoint += point;
     }
     
-    if (edge & JKExcludeEndPoint) {
+    if (edge & CJGExcludeEndPoint) {
         endPoint += point;
     }
     
@@ -108,7 +108,7 @@ typedef NS_ENUM(NSInteger, EdgeType) {
 }
 
 
-- (void)cjg_addLeftBorderWithColor:(UIColor *)color width:(CGFloat)borderWidth excludePoint:(CGFloat)point edgeType:(JKExcludePoint)edge {
+- (void)cjg_addLeftBorderWithColor:(UIColor *)color width:(CGFloat)borderWidth excludePoint:(CGFloat)point edgeType:(CJGExcludePoint)edge {
     [self cjg_removeLeftBorder];
     
     UIView *border = [[UIView alloc] init];
@@ -123,11 +123,11 @@ typedef NS_ENUM(NSInteger, EdgeType) {
     
     CGFloat startPoint = 0.0f;
     CGFloat endPoint = 0.0f;
-    if (edge & JKExcludeStartPoint) {
+    if (edge & CJGExcludeStartPoint) {
         startPoint += point;
     }
     
-    if (edge & JKExcludeEndPoint) {
+    if (edge & CJGExcludeEndPoint) {
         endPoint += point;
     }
     
@@ -146,7 +146,7 @@ typedef NS_ENUM(NSInteger, EdgeType) {
 }
 
 
-- (void)cjg_addBottomBorderWithColor:(UIColor *)color width:(CGFloat)borderWidth excludePoint:(CGFloat)point edgeType:(JKExcludePoint)edge {
+- (void)cjg_addBottomBorderWithColor:(UIColor *)color width:(CGFloat)borderWidth excludePoint:(CGFloat)point edgeType:(CJGExcludePoint)edge {
     [self cjg_removeBottomBorder];
     
     UIView *border = [[UIView alloc] init];
@@ -160,11 +160,11 @@ typedef NS_ENUM(NSInteger, EdgeType) {
     
     CGFloat startPoint = 0.0f;
     CGFloat endPoint = 0.0f;
-    if (edge & JKExcludeStartPoint) {
+    if (edge & CJGExcludeStartPoint) {
         startPoint += point;
     }
     
-    if (edge & JKExcludeEndPoint) {
+    if (edge & CJGExcludeEndPoint) {
         endPoint += point;
     }
 
@@ -182,7 +182,7 @@ typedef NS_ENUM(NSInteger, EdgeType) {
     [self addConstraint:[NSLayoutConstraint constraintWithItem:border attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:borderWidth]];
 }
 
-- (void)cjg_addRightBorderWithColor:(UIColor *)color width:(CGFloat)borderWidth excludePoint:(CGFloat)point edgeType:(JKExcludePoint)edge {
+- (void)cjg_addRightBorderWithColor:(UIColor *)color width:(CGFloat)borderWidth excludePoint:(CGFloat)point edgeType:(CJGExcludePoint)edge {
     [self cjg_removeRightBorder];
     
     UIView *border = [[UIView alloc] init];
@@ -196,11 +196,11 @@ typedef NS_ENUM(NSInteger, EdgeType) {
     
     CGFloat startPoint = 0.0f;
     CGFloat endPoint = 0.0f;
-    if (edge & JKExcludeStartPoint) {
+    if (edge & CJGExcludeStartPoint) {
         startPoint += point;
     }
     
-    if (edge & JKExcludeEndPoint) {
+    if (edge & CJGExcludeEndPoint) {
         endPoint += point;
     }
 

@@ -29,7 +29,7 @@ NSString* const cjg_iTunesAppleString = @"itunes.apple.com";
 ////////////////////////////////////////////////////////////////////////////////
 #pragma mark - Implementation
 
-@implementation UIViewController (JKStoreKit)
+@implementation UIViewController (CJGStoreKit)
 
 - (void)cjg_presentStoreKitItemWithIdentifier:(NSInteger)itemIdentifier
 {

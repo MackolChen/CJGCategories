@@ -1,6 +1,6 @@
 //
 //  NSString+CJGNormalRegex.h
-//  JKCategories
+//  CJGCategories
 //
 //  Created by KevinHM on 15/6/24.
 //  Copyright (c) 2015年 KevinHM. All rights reserved.
@@ -82,7 +82,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString (JKNormalRegex)
+@interface NSString (CJGNormalRegex)
 /**
  *  手机号码的有效性:分电信、联通、移动和小灵通
  */

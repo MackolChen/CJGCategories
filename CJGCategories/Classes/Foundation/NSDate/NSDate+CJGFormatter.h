@@ -1,6 +1,6 @@
 //
 //  NSDate+Formatter.h
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Copyright (C) 2013 by Christopher Meyer
 //  http://schwiiz.org/
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSDate (JKFormatter)
+@interface NSDate (CJGFormatter)
 
 +(NSDateFormatter *)cjg_formatter;
 +(NSDateFormatter *)cjg_formatterWithoutTime;

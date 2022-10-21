@@ -1,6 +1,6 @@
 //
 //  UIViewController+BackButtonTouched.h
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 14/12/30.
 //  Copyright (c) 2014年 www.skyfox.org. All rights reserved.
@@ -8,15 +8,15 @@
 
 #import "UIViewController+CJGBackButtonTouched.h"
 #import <objc/runtime.h>
-static const void *JKBackButtonHandlerKey = &JKBackButtonHandlerKey;
+static const void *CJGBackButtonHandlerKey = &CJGBackButtonHandlerKey;
 
-@implementation UIViewController (JKBackButtonTouched)
--(void)cjg_backButtonTouched:(JKBackButtonHandler)backButtonHandler{
-    objc_setAssociatedObject(self, JKBackButtonHandlerKey, backButtonHandler, OBJC_ASSOCIATION_COPY);
+@implementation UIViewController (CJGBackButtonTouched)
+-(void)cjg_backButtonTouched:(CJGBackButtonHandler)backButtonHandler{
+    objc_setAssociatedObject(self, CJGBackButtonHandlerKey, backButtonHandler, OBJC_ASSOCIATION_COPY);
 }
-- (JKBackButtonHandler)cjg_backButtonTouched
+- (CJGBackButtonHandler)cjg_backButtonTouched
 {
-    return objc_getAssociatedObject(self, JKBackButtonHandlerKey);
+    return objc_getAssociatedObject(self, CJGBackButtonHandlerKey);
 }
 @end
 
@@ -28,7 +28,7 @@ static const void *JKBackButtonHandlerKey = &JKBackButtonHandlerKey;
 	}
 
    	UIViewController* vc = [self topViewController];
-    JKBackButtonHandler handler = [vc cjg_backButtonTouched];
+    CJGBackButtonHandler handler = [vc cjg_backButtonTouched];
     if (handler) {
         // Workaround for iOS7.1. Thanks to @boliva - http://stackoverflow.com/posts/comments/34452906
 

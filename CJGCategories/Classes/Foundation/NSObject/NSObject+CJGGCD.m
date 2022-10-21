@@ -1,13 +1,13 @@
 //
 //  NSObject+CJGGCD.m
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 14/12/15.
 //  Copyright (c) 2014年 www.skyfox.org. All rights reserved.
 //
 
 #import "NSObject+CJGGCD.h"
-@implementation NSObject (JKGCD)
+@implementation NSObject (CJGGCD)
 /**
  *  @brief  异步执行代码块
  *

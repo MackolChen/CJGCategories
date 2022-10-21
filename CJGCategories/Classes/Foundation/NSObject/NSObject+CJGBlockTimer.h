@@ -36,6 +36,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSObject (JKBlockTimer)
+@interface NSObject (CJGBlockTimer)
 -(void)cjg_logTimeTakenToRunBlock:(void (^)(void)) block withPrefix:(NSString*) prefixString;
 @end

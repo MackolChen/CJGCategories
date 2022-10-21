@@ -1,6 +1,6 @@
 //
 //  UIImage+FileName.h
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 14/12/15.
 //  Copyright (c) 2014年 www.skyfox.org. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIImage (JKFileName)
+@interface UIImage (CJGFileName)
 /**
  *  @brief  根据main bundle中的文件名读取图片
  *
@@ -18,7 +18,7 @@
  */
 + (UIImage *)cjg_imageWithFileName:(NSString *)name;
 /**
- *  @author JKCategories
+ *  @author CJGCategories
  *
  *  根据指定bundle中的文件名读取图片
  *

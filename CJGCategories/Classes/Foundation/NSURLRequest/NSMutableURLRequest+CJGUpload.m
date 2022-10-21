@@ -8,7 +8,7 @@
 
 #import "NSMutableURLRequest+CJGUpload.h"
 
-@implementation NSMutableURLRequest (JKUpload)
+@implementation NSMutableURLRequest (CJGUpload)
 
 + (instancetype)cjg_requestWithURL:(NSURL *)URL fileURL:(NSURL *)fileURL name:(NSString *)name {
     return [self cjg_requestWithURL:URL fileURLs:@[fileURL] name:name];

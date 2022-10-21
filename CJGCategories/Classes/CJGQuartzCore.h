@@ -1,13 +1,13 @@
 //
-//  JKQuartzCore.h
-//  JKCategories
+//  CJGQuartzCore.h
+//  CJGCategories
 //
 //  Created by Jakey on 16/5/29.
 //  Copyright © 2016年 www.skyfox.org. All rights reserved.
 //
 
-#ifndef JKQuartzCore_h
-#define JKQuartzCore_h
+#ifndef CJGQuartzCore_h
+#define CJGQuartzCore_h
 
 #import "CAAnimation+Blocks.h"
 #import "CAAnimation+CJGEasingEquations.h"
@@ -16,4 +16,4 @@
 #import "CAShapeLayer+CJGUIBezierPath.h"
 #import "CATransaction+CJGAnimateWithDuration.h"
 
-#endif /* JKQuartzCore_h */
+#endif /* CJGQuartzCore_h */

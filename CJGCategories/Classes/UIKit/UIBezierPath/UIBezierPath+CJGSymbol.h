@@ -15,9 +15,9 @@ typedef enum {
   kUIBezierPathArrowDirectionLeft  = 1 << 1,
   kUIBezierPathArrowDirectionUp    = 1 << 2,
   kUIBezierPathArrowDirectionDown  = 1 << 3
-}JKUIBezierPathArrowDirection;
+}CJGUIBezierPathArrowDirection;
 
-@interface UIBezierPath (JKSymbol)
+@interface UIBezierPath (CJGSymbol)
 
 + (UIBezierPath *)cjg_customBezierPathOfPlusSymbolWithRect:(CGRect)rect   // plus
                                                  scale:(CGFloat)scale;
@@ -32,7 +32,7 @@ typedef enum {
 + (UIBezierPath *)cjg_customBezierPathOfArrowSymbolWithRect:(CGRect)rect  // arrow
                                                   scale:(CGFloat)scale
                                                   thick:(CGFloat)thick
-                                              direction:(JKUIBezierPathArrowDirection)direction;
+                                              direction:(CJGUIBezierPathArrowDirection)direction;
 + (UIBezierPath *)cjg_customBezierPathOfPencilSymbolWithRect:(CGRect)rect // pencil
                                                    scale:(CGFloat)scale
                                                    thick:(CGFloat)thick;

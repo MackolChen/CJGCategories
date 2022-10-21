@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIViewController (JKRecursiveDescription)
+@interface UIViewController (CJGRecursiveDescription)
 /**
  *  @brief  视图层级
  *

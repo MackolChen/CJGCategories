@@ -1,6 +1,6 @@
 //
 //  MKMapView+BetterMaps.h
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 15/5/23.
 //  Copyright (c) 2015年 www.skyfox.org. All rights reserved.
@@ -10,6 +10,6 @@
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
 
-@interface MKMapView (JKBetterMaps)
+@interface MKMapView (CJGBetterMaps)
 - (void)cjg_zoomToFitAnnotationsAnimated:(BOOL)animated;
 @end

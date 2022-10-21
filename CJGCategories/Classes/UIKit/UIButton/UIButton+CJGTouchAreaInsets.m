@@ -25,7 +25,7 @@
 #import <objc/runtime.h>
 #import "UIButton+CJGTouchAreaInsets.h"
 
-@implementation UIButton (JKTouchAreaInsets)
+@implementation UIButton (CJGTouchAreaInsets)
 
 - (UIEdgeInsets)cjg_touchAreaInsets
 {

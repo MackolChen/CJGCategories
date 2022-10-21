@@ -15,7 +15,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 
-@interface CLLocation (JKCH1903)
+@interface CLLocation (CJGCH1903)
 
 /*!
  @method     initWithCH1903x

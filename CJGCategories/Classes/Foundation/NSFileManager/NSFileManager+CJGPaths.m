@@ -1,6 +1,6 @@
 //
 //  NSFileManager+Paths.m
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 14/12/30.
 //  Copyright (c) 2014年 www.skyfox.org. All rights reserved.
@@ -9,7 +9,7 @@
 #import "NSFileManager+CJGPaths.h"
 #include <sys/xattr.h>
 
-@implementation NSFileManager (JKPaths)
+@implementation NSFileManager (CJGPaths)
 + (NSURL *)cjg_URLForDirectory:(NSSearchPathDirectory)directory
 {
     return [self.defaultManager URLsForDirectory:directory inDomains:NSUserDomainMask].lastObject;

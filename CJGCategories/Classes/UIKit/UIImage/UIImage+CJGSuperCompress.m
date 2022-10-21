@@ -1,6 +1,6 @@
 //
 //  UIImage+SuperCompress.m
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 16/1/22.
 //  Copyright © 2016年 Jakey. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import "UIImage+CJGSuperCompress.h"
 
-@implementation UIImage (JKSuperCompress)
+@implementation UIImage (CJGSuperCompress)
 + (UIImage*)cjg_resizableHalfImage:(NSString *)name
 {
     UIImage *normal = [UIImage imageNamed:name];

@@ -32,7 +32,7 @@
 
 @end
 
-@implementation UIButton (JKMiddleAligning)
+@implementation UIButton (CJGMiddleAligning)
 
 - (void)cjg_middleAlignButtonWithSpacing:(CGFloat)spacing
 {

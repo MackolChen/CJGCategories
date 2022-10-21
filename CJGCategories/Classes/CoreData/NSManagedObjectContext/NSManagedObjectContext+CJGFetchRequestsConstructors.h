@@ -6,7 +6,7 @@
 //
 #import <CoreData/CoreData.h>
 
-@interface NSManagedObjectContext(JKFetchRequestsConstructors)
+@interface NSManagedObjectContext(CJGFetchRequestsConstructors)
 /* Create fetch request to fetch one object using given key and value. Usefull to fetch objects on their uid key  */
 - (NSFetchRequest*)cjg_fetchRequestForEntityObject:(NSString*)entityName usingValue:(id)value forKey:(NSString*)key returningAsFault:(BOOL)fault;
 

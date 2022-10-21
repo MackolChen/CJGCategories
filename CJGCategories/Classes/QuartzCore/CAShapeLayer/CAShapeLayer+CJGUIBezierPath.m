@@ -25,7 +25,7 @@
 
 #import "CAShapeLayer+CJGUIBezierPath.h"
 
-@implementation CAShapeLayer (JKUIBezierPath)
+@implementation CAShapeLayer (CJGUIBezierPath)
 
 -(void)cjg_updateWithBezierPath:(UIBezierPath *)path
 {

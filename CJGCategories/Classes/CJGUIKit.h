@@ -1,13 +1,13 @@
 //
-//  JKUIKit.h
-//  JKCategories
+//  CJGUIKit.h
+//  CJGCategories
 //
 //  Created by Jakey on 16/5/29.
 //  Copyright © 2016年 www.skyfox.org. All rights reserved.
 //
 
-#ifndef JKUIKit_h
-#define JKUIKit_h
+#ifndef CJGUIKit_h
+#define CJGUIKit_h
 
 
 #import "UIAlertView+CJGBlock.h"
@@ -119,4 +119,4 @@
 #import "UIWebView+CJGStyle.h"
 #import "UIWebVIew+CJGSwipeGesture.h"
 #import "UIWindow+CJGHierarchy.h"
-#endif /* JKUIKit_h */
+#endif /* CJGUIKit_h */

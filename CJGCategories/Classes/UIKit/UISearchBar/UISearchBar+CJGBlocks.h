@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UISearchBar (JKBlocks)
+@interface UISearchBar (CJGBlocks)
 
 @property (copy, nonatomic) BOOL (^cjg_completionShouldBeginEditingBlock)(UISearchBar *searchbar);
 @property (copy, nonatomic) void (^cjg_completionTextDidBeginEditingBlock)(UISearchBar *searchBar);

@@ -1,21 +1,21 @@
 //
 //  UIScrollView+CJGAddition.h
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 14/12/30.
 //  Copyright (c) 2014年 www.skyfox.org. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-typedef NS_ENUM(NSInteger, JKScrollDirection) {
-    JKScrollDirectionUp,
-    JKScrollDirectionDown,
-    JKScrollDirectionLeft,
-    JKScrollDirectionRight,
-    JKScrollDirectionWTF
+typedef NS_ENUM(NSInteger, CJGScrollDirection) {
+    CJGScrollDirectionUp,
+    CJGScrollDirectionDown,
+    CJGScrollDirectionLeft,
+    CJGScrollDirectionRight,
+    CJGScrollDirectionWTF
 };
 
-@interface UIScrollView (JKAddition)
+@interface UIScrollView (CJGAddition)
 @property(nonatomic) CGFloat cjg_contentWidth;
 @property(nonatomic) CGFloat cjg_contentHeight;
 @property(nonatomic) CGFloat cjg_contentOffsetX;
@@ -26,7 +26,7 @@ typedef NS_ENUM(NSInteger, JKScrollDirection) {
 - (CGPoint)cjg_leftContentOffset;
 - (CGPoint)cjg_rightContentOffset;
 
-- (JKScrollDirection)cjg_ScrollDirection;
+- (CJGScrollDirection)cjg_ScrollDirection;
 
 - (BOOL)cjg_isScrolledToTop;
 - (BOOL)cjg_isScrolledToBottom;

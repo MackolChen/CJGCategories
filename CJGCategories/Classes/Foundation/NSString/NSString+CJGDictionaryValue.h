@@ -1,6 +1,6 @@
 //
 //  NSString+CJGDictionary.h
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 14-6-13.
 //  Copyright (c) 2014年 jakey. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString (JKDictionaryValue)
+@interface NSString (CJGDictionaryValue)
 /**
  *  @brief  JSON字符串转成NSDictionary
  *

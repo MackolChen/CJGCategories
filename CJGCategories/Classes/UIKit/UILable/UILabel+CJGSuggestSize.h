@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UILabel (JKSuggestSize)
+@interface UILabel (CJGSuggestSize)
 
 - (CGSize)cjg_suggestedSizeForWidth:(CGFloat)width;
 - (CGSize)cjg_suggestSizeForAttributedString:(NSAttributedString *)string width:(CGFloat)width;

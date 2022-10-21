@@ -7,7 +7,7 @@
 
 #import "NSNumber+CJGCGFloat.h"
 
-@implementation NSNumber (JKCGFloat)
+@implementation NSNumber (CJGCGFloat)
 
 - (CGFloat)cjg_CGFloatValue
 {
@@ -19,7 +19,7 @@
     return result;
 }
 
-- (id)initWithJKCGFloat:(CGFloat)value
+- (id)initWithCJGCGFloat:(CGFloat)value
 {
 #if (CGFLOAT_IS_DOUBLE == 1)
     self = [self initWithDouble:value];
@@ -31,7 +31,7 @@
 
 + (NSNumber *)cjg_numberWithCGFloat:(CGFloat)value
 {
-    NSNumber *result = [[self alloc] initWithJKCGFloat:value];
+    NSNumber *result = [[self alloc] initWithCJGCGFloat:value];
     return result;
 }
 

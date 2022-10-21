@@ -1,6 +1,6 @@
 //
 //  UINavigationController+CJGStackManager.h
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 15/4/25.
 //  Copyright (c) 2015年 www.skyfox.org. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UINavigationController (JKStackManager)
+@interface UINavigationController (CJGStackManager)
 /**
  *  @brief  寻找Navigation中的某个viewcontroler对象
  *

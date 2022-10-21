@@ -6,7 +6,7 @@
 // Extends the UIImage class to support resizing/cropping
 #import <UIKit/UIKit.h>
 
-@interface UIImage (JKResize)
+@interface UIImage (CJGResize)
 
 - (UIImage *)cjg_croppedImage:(CGRect)bounds;
 - (UIImage *)cjg_thumbnailImage:(NSInteger)thumbnailSize

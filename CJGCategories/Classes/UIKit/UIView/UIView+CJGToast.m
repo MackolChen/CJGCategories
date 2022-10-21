@@ -16,49 +16,49 @@
  */
 
 // general appearance
-static const CGFloat JKToastMaxWidth            = 0.8;      // 80% of parent view width
-static const CGFloat JKToastMaxHeight           = 0.8;      // 80% of parent view height
-static const CGFloat JKToastHorizontalPadding   = 10.0;
-static const CGFloat JKToastVerticalPadding     = 10.0;
-static const CGFloat JKToastCornerRadius        = 10.0;
-static const CGFloat JKToastOpacity             = 0.8;
-static const CGFloat JKToastFontSize            = 16.0;
-static const CGFloat JKToastMaxTitleLines       = 0;
-static const CGFloat JKToastMaxMessageLines     = 0;
-static const NSTimeInterval JKToastFadeDuration = 0.2;
+static const CGFloat CJGToastMaxWidth            = 0.8;      // 80% of parent view width
+static const CGFloat CJGToastMaxHeight           = 0.8;      // 80% of parent view height
+static const CGFloat CJGToastHorizontalPadding   = 10.0;
+static const CGFloat CJGToastVerticalPadding     = 10.0;
+static const CGFloat CJGToastCornerRadius        = 10.0;
+static const CGFloat CJGToastOpacity             = 0.8;
+static const CGFloat CJGToastFontSize            = 16.0;
+static const CGFloat CJGToastMaxTitleLines       = 0;
+static const CGFloat CJGToastMaxMessageLines     = 0;
+static const NSTimeInterval CJGToastFadeDuration = 0.2;
 
 // shadow appearance
-static const CGFloat JKToastShadowOpacity       = 0.8;
-static const CGFloat JKToastShadowRadius        = 6.0;
-static const CGSize  JKToastShadowOffset        = { 4.0, 4.0 };
-static const BOOL    JKToastDisplayShadow       = YES;
+static const CGFloat CJGToastShadowOpacity       = 0.8;
+static const CGFloat CJGToastShadowRadius        = 6.0;
+static const CGSize  CJGToastShadowOffset        = { 4.0, 4.0 };
+static const BOOL    CJGToastDisplayShadow       = YES;
 
 // display duration
-static const NSTimeInterval JKToastDefaultDuration  = 3.0;
+static const NSTimeInterval CJGToastDefaultDuration  = 3.0;
 
 // image view size
-static const CGFloat JKToastImageViewWidth      = 80.0;
-static const CGFloat JKToastImageViewHeight     = 80.0;
+static const CGFloat CJGToastImageViewWidth      = 80.0;
+static const CGFloat CJGToastImageViewHeight     = 80.0;
 
 // activity
-static const CGFloat JKToastActivityWidth       = 100.0;
-static const CGFloat JKToastActivityHeight      = 100.0;
-static const NSString * JKToastActivityDefaultPosition = @"center";
+static const CGFloat CJGToastActivityWidth       = 100.0;
+static const CGFloat CJGToastActivityHeight      = 100.0;
+static const NSString * CJGToastActivityDefaultPosition = @"center";
 
 // interaction
-static const BOOL JKToastHidesOnTap             = YES;     // excludes activity views
+static const BOOL CJGToastHidesOnTap             = YES;     // excludes activity views
 
 // associative reference keys
-static const NSString * JKToastTimerKey         = @"JKToastTimerKey";
-static const NSString * JKToastActivityViewKey  = @"JKToastActivityViewKey";
-static const NSString * JKToastTapCallbackKey   = @"JKToastTapCallbackKey";
+static const NSString * CJGToastTimerKey         = @"CJGToastTimerKey";
+static const NSString * CJGToastActivityViewKey  = @"CJGToastActivityViewKey";
+static const NSString * CJGToastTapCallbackKey   = @"CJGToastTapCallbackKey";
 
 // positions
-NSString * const JKToastPositionTop             = @"top";
-NSString * const JKToastPositionCenter          = @"center";
-NSString * const JKToastPositionBottom          = @"bottom";
+NSString * const CJGToastPositionTop             = @"top";
+NSString * const CJGToastPositionCenter          = @"center";
+NSString * const CJGToastPositionBottom          = @"bottom";
 
-@interface UIView (JKToastPrivate)
+@interface UIView (CJGToastPrivate)
 
 - (void)cjg_hideToast:(UIView *)toast;
 - (void)cjg_toastTimerDidFinish:(NSTimer *)timer;
@@ -70,12 +70,12 @@ NSString * const JKToastPositionBottom          = @"bottom";
 @end
 
 
-@implementation UIView (JKToast)
+@implementation UIView (CJGToast)
 
 #pragma mark - Toast Methods
 
 - (void)cjg_makeToast:(NSString *)message {
-    [self cjg_makeToast:message duration:JKToastDefaultDuration position:nil];
+    [self cjg_makeToast:message duration:CJGToastDefaultDuration position:nil];
 }
 
 - (void)cjg_makeToast:(NSString *)message duration:(NSTimeInterval)duration position:(id)position {
@@ -99,7 +99,7 @@ NSString * const JKToastPositionBottom          = @"bottom";
 }
 
 - (void)cjg_showToast:(UIView *)toast {
-    [self cjg_showToast:toast duration:JKToastDefaultDuration position:nil];
+    [self cjg_showToast:toast duration:CJGToastDefaultDuration position:nil];
 }
 
 
@@ -115,7 +115,7 @@ NSString * const JKToastPositionBottom          = @"bottom";
     toast.center = [self cjg_centerPointForPosition:position withToast:toast];
     toast.alpha = 0.0;
     
-    if (JKToastHidesOnTap) {
+    if (CJGToastHidesOnTap) {
         UITapGestureRecognizer *recognizer = [[UITapGestureRecognizer alloc] initWithTarget:toast action:@selector(cjg_handleToastTapped:)];
         [toast addGestureRecognizer:recognizer];
         toast.userInteractionEnabled = YES;
@@ -124,7 +124,7 @@ NSString * const JKToastPositionBottom          = @"bottom";
     
     [self addSubview:toast];
     
-    [UIView animateWithDuration:JKToastFadeDuration
+    [UIView animateWithDuration:CJGToastFadeDuration
                           delay:0.0
                         options:(UIViewAnimationOptionCurveEaseOut | UIViewAnimationOptionAllowUserInteraction)
                      animations:^{
@@ -132,14 +132,14 @@ NSString * const JKToastPositionBottom          = @"bottom";
                      } completion:^(BOOL finished) {
                          NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:duration target:self selector:@selector(cjg_toastTimerDidFinish:) userInfo:toast repeats:NO];
                          // associate the timer with the toast view
-                         objc_setAssociatedObject (toast, &JKToastTimerKey, timer, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-                         objc_setAssociatedObject (toast, &JKToastTapCallbackKey, tapCallback, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+                         objc_setAssociatedObject (toast, &CJGToastTimerKey, timer, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+                         objc_setAssociatedObject (toast, &CJGToastTapCallbackKey, tapCallback, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
                      }];
 }
 
 
 - (void)cjg_hideToast:(UIView *)toast {
-    [UIView animateWithDuration:JKToastFadeDuration
+    [UIView animateWithDuration:CJGToastFadeDuration
                           delay:0.0
                         options:(UIViewAnimationOptionCurveEaseIn | UIViewAnimationOptionBeginFromCurrentState)
                      animations:^{
@@ -156,10 +156,10 @@ NSString * const JKToastPositionBottom          = @"bottom";
 }
 
 - (void)cjg_handleToastTapped:(UITapGestureRecognizer *)recognizer {
-    NSTimer *timer = (NSTimer *)objc_getAssociatedObject(self, &JKToastTimerKey);
+    NSTimer *timer = (NSTimer *)objc_getAssociatedObject(self, &CJGToastTimerKey);
     [timer invalidate];
     
-    void (^callback)(void) = objc_getAssociatedObject(self, &JKToastTapCallbackKey);
+    void (^callback)(void) = objc_getAssociatedObject(self, &CJGToastTapCallbackKey);
     if (callback) {
         callback();
     }
@@ -169,26 +169,26 @@ NSString * const JKToastPositionBottom          = @"bottom";
 #pragma mark - Toast Activity Methods
 
 - (void)cjg_makeToastActivity {
-    [self cjg_makeToastActivity:JKToastActivityDefaultPosition];
+    [self cjg_makeToastActivity:CJGToastActivityDefaultPosition];
 }
 
 - (void)cjg_makeToastActivity:(id)position {
     // sanity
-    UIView *existingActivityView = (UIView *)objc_getAssociatedObject(self, &JKToastActivityViewKey);
+    UIView *existingActivityView = (UIView *)objc_getAssociatedObject(self, &CJGToastActivityViewKey);
     if (existingActivityView != nil) return;
     
-    UIView *activityView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, JKToastActivityWidth, JKToastActivityHeight)];
+    UIView *activityView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CJGToastActivityWidth, CJGToastActivityHeight)];
     activityView.center = [self cjg_centerPointForPosition:position withToast:activityView];
-    activityView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:JKToastOpacity];
+    activityView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:CJGToastOpacity];
     activityView.alpha = 0.0;
     activityView.autoresizingMask = (UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin);
-    activityView.layer.cornerRadius = JKToastCornerRadius;
+    activityView.layer.cornerRadius = CJGToastCornerRadius;
     
-    if (JKToastDisplayShadow) {
+    if (CJGToastDisplayShadow) {
         activityView.layer.shadowColor = [UIColor blackColor].CGColor;
-        activityView.layer.shadowOpacity = JKToastShadowOpacity;
-        activityView.layer.shadowRadius = JKToastShadowRadius;
-        activityView.layer.shadowOffset = JKToastShadowOffset;
+        activityView.layer.shadowOpacity = CJGToastShadowOpacity;
+        activityView.layer.shadowRadius = CJGToastShadowRadius;
+        activityView.layer.shadowOffset = CJGToastShadowOffset;
     }
     
     UIActivityIndicatorView *activityIndicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
@@ -197,11 +197,11 @@ NSString * const JKToastPositionBottom          = @"bottom";
     [activityIndicatorView startAnimating];
     
     // associate the activity view with self
-    objc_setAssociatedObject (self, &JKToastActivityViewKey, activityView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject (self, &CJGToastActivityViewKey, activityView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     
     [self addSubview:activityView];
     
-    [UIView animateWithDuration:JKToastFadeDuration
+    [UIView animateWithDuration:CJGToastFadeDuration
                           delay:0.0
                         options:UIViewAnimationOptionCurveEaseOut
                      animations:^{
@@ -210,16 +210,16 @@ NSString * const JKToastPositionBottom          = @"bottom";
 }
 
 - (void)cjg_hideToastActivity {
-    UIView *existingActivityView = (UIView *)objc_getAssociatedObject(self, &JKToastActivityViewKey);
+    UIView *existingActivityView = (UIView *)objc_getAssociatedObject(self, &CJGToastActivityViewKey);
     if (existingActivityView != nil) {
-        [UIView animateWithDuration:JKToastFadeDuration
+        [UIView animateWithDuration:CJGToastFadeDuration
                               delay:0.0
                             options:(UIViewAnimationOptionCurveEaseIn | UIViewAnimationOptionBeginFromCurrentState)
                          animations:^{
                              existingActivityView.alpha = 0.0;
                          } completion:^(BOOL finished) {
                              [existingActivityView removeFromSuperview];
-                             objc_setAssociatedObject (self, &JKToastActivityViewKey, nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+                             objc_setAssociatedObject (self, &CJGToastActivityViewKey, nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
                          }];
     }
 }
@@ -228,9 +228,9 @@ NSString * const JKToastPositionBottom          = @"bottom";
 
 - (CGPoint)cjg_centerPointForPosition:(id)point withToast:(UIView *)toast {
     if([point isKindOfClass:[NSString class]]) {
-        if([point caseInsensitiveCompare:JKToastPositionTop] == NSOrderedSame) {
-            return CGPointMake(self.bounds.size.width/2, (toast.frame.size.height / 2) + JKToastVerticalPadding);
-        } else if([point caseInsensitiveCompare:JKToastPositionCenter] == NSOrderedSame) {
+        if([point caseInsensitiveCompare:CJGToastPositionTop] == NSOrderedSame) {
+            return CGPointMake(self.bounds.size.width/2, (toast.frame.size.height / 2) + CJGToastVerticalPadding);
+        } else if([point caseInsensitiveCompare:CJGToastPositionCenter] == NSOrderedSame) {
             return CGPointMake(self.bounds.size.width / 2, self.bounds.size.height / 2);
         }
     } else if ([point isKindOfClass:[NSValue class]]) {
@@ -238,7 +238,7 @@ NSString * const JKToastPositionBottom          = @"bottom";
     }
     
     // default to bottom
-    return CGPointMake(self.bounds.size.width/2, (self.bounds.size.height - (toast.frame.size.height / 2)) - JKToastVerticalPadding);
+    return CGPointMake(self.bounds.size.width/2, (self.bounds.size.height - (toast.frame.size.height / 2)) - CJGToastVerticalPadding);
 }
 
 - (CGSize)cjg_sizeForString:(NSString *)string font:(UIFont *)font constrainedToSize:(CGSize)constrainedSize lineBreakMode:(NSLineBreakMode)lineBreakMode {
@@ -268,21 +268,21 @@ NSString * const JKToastPositionBottom          = @"bottom";
     // create the parent view
     UIView *wrapperView = [[UIView alloc] init];
     wrapperView.autoresizingMask = (UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin);
-    wrapperView.layer.cornerRadius = JKToastCornerRadius;
+    wrapperView.layer.cornerRadius = CJGToastCornerRadius;
     
-    if (JKToastDisplayShadow) {
+    if (CJGToastDisplayShadow) {
         wrapperView.layer.shadowColor = [UIColor blackColor].CGColor;
-        wrapperView.layer.shadowOpacity = JKToastShadowOpacity;
-        wrapperView.layer.shadowRadius = JKToastShadowRadius;
-        wrapperView.layer.shadowOffset = JKToastShadowOffset;
+        wrapperView.layer.shadowOpacity = CJGToastShadowOpacity;
+        wrapperView.layer.shadowRadius = CJGToastShadowRadius;
+        wrapperView.layer.shadowOffset = CJGToastShadowOffset;
     }
 
-    wrapperView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:JKToastOpacity];
+    wrapperView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:CJGToastOpacity];
     
     if(image != nil) {
         imageView = [[UIImageView alloc] initWithImage:image];
         imageView.contentMode = UIViewContentModeScaleAspectFit;
-        imageView.frame = CGRectMake(JKToastHorizontalPadding, JKToastVerticalPadding, JKToastImageViewWidth, JKToastImageViewHeight);
+        imageView.frame = CGRectMake(CJGToastHorizontalPadding, CJGToastVerticalPadding, CJGToastImageViewWidth, CJGToastImageViewHeight);
     }
     
     CGFloat imageWidth, imageHeight, imageLeft;
@@ -291,15 +291,15 @@ NSString * const JKToastPositionBottom          = @"bottom";
     if(imageView != nil) {
         imageWidth = imageView.bounds.size.width;
         imageHeight = imageView.bounds.size.height;
-        imageLeft = JKToastHorizontalPadding;
+        imageLeft = CJGToastHorizontalPadding;
     } else {
         imageWidth = imageHeight = imageLeft = 0.0;
     }
     
     if (title != nil) {
         titleLabel = [[UILabel alloc] init];
-        titleLabel.numberOfLines = JKToastMaxTitleLines;
-        titleLabel.font = [UIFont boldSystemFontOfSize:JKToastFontSize];
+        titleLabel.numberOfLines = CJGToastMaxTitleLines;
+        titleLabel.font = [UIFont boldSystemFontOfSize:CJGToastFontSize];
         titleLabel.textAlignment = NSTextAlignmentLeft;
         titleLabel.lineBreakMode = NSLineBreakByWordWrapping;
         titleLabel.textColor = [UIColor whiteColor];
@@ -308,15 +308,15 @@ NSString * const JKToastPositionBottom          = @"bottom";
         titleLabel.text = title;
         
         // size the title label according to the length of the text
-        CGSize maxSizeTitle = CGSizeMake((self.bounds.size.width * JKToastMaxWidth) - imageWidth, self.bounds.size.height * JKToastMaxHeight);
+        CGSize maxSizeTitle = CGSizeMake((self.bounds.size.width * CJGToastMaxWidth) - imageWidth, self.bounds.size.height * CJGToastMaxHeight);
         CGSize expectedSizeTitle = [self cjg_sizeForString:title font:titleLabel.font constrainedToSize:maxSizeTitle lineBreakMode:titleLabel.lineBreakMode];
         titleLabel.frame = CGRectMake(0.0, 0.0, expectedSizeTitle.width, expectedSizeTitle.height);
     }
     
     if (message != nil) {
         messageLabel = [[UILabel alloc] init];
-        messageLabel.numberOfLines = JKToastMaxMessageLines;
-        messageLabel.font = [UIFont systemFontOfSize:JKToastFontSize];
+        messageLabel.numberOfLines = CJGToastMaxMessageLines;
+        messageLabel.font = [UIFont systemFontOfSize:CJGToastFontSize];
         messageLabel.lineBreakMode = NSLineBreakByWordWrapping;
         messageLabel.textColor = [UIColor whiteColor];
         messageLabel.backgroundColor = [UIColor clearColor];
@@ -324,7 +324,7 @@ NSString * const JKToastPositionBottom          = @"bottom";
         messageLabel.text = message;
         
         // size the message label according to the length of the text
-        CGSize maxSizeMessage = CGSizeMake((self.bounds.size.width * JKToastMaxWidth) - imageWidth, self.bounds.size.height * JKToastMaxHeight);
+        CGSize maxSizeMessage = CGSizeMake((self.bounds.size.width * CJGToastMaxWidth) - imageWidth, self.bounds.size.height * CJGToastMaxHeight);
         CGSize expectedSizeMessage = [self cjg_sizeForString:message font:messageLabel.font constrainedToSize:maxSizeMessage lineBreakMode:messageLabel.lineBreakMode];
         messageLabel.frame = CGRectMake(0.0, 0.0, expectedSizeMessage.width, expectedSizeMessage.height);
     }
@@ -335,8 +335,8 @@ NSString * const JKToastPositionBottom          = @"bottom";
     if(titleLabel != nil) {
         titleWidth = titleLabel.bounds.size.width;
         titleHeight = titleLabel.bounds.size.height;
-        titleTop = JKToastVerticalPadding;
-        titleLeft = imageLeft + imageWidth + JKToastHorizontalPadding;
+        titleTop = CJGToastVerticalPadding;
+        titleLeft = imageLeft + imageWidth + CJGToastHorizontalPadding;
     } else {
         titleWidth = titleHeight = titleTop = titleLeft = 0.0;
     }
@@ -347,8 +347,8 @@ NSString * const JKToastPositionBottom          = @"bottom";
     if(messageLabel != nil) {
         messageWidth = messageLabel.bounds.size.width;
         messageHeight = messageLabel.bounds.size.height;
-        messageLeft = imageLeft + imageWidth + JKToastHorizontalPadding;
-        messageTop = titleTop + titleHeight + JKToastVerticalPadding;
+        messageLeft = imageLeft + imageWidth + CJGToastHorizontalPadding;
+        messageTop = titleTop + titleHeight + CJGToastVerticalPadding;
     } else {
         messageWidth = messageHeight = messageLeft = messageTop = 0.0;
     }
@@ -357,8 +357,8 @@ NSString * const JKToastPositionBottom          = @"bottom";
     CGFloat longerLeft = MAX(titleLeft, messageLeft);
     
     // wrapper width uses the longerWidth or the image width, whatever is larger. same logic applies to the wrapper height
-    CGFloat wrapperWidth = MAX((imageWidth + (JKToastHorizontalPadding * 2)), (longerLeft + longerWidth + JKToastHorizontalPadding));    
-    CGFloat wrapperHeight = MAX((messageTop + messageHeight + JKToastVerticalPadding), (imageHeight + (JKToastVerticalPadding * 2)));
+    CGFloat wrapperWidth = MAX((imageWidth + (CJGToastHorizontalPadding * 2)), (longerLeft + longerWidth + CJGToastHorizontalPadding));    
+    CGFloat wrapperHeight = MAX((messageTop + messageHeight + CJGToastVerticalPadding), (imageHeight + (CJGToastVerticalPadding * 2)));
                          
     wrapperView.frame = CGRectMake(0.0, 0.0, wrapperWidth, wrapperHeight);
     

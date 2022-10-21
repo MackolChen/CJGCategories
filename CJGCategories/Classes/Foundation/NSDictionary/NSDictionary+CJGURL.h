@@ -1,6 +1,6 @@
 //
 //  NSDictionary+CJGURL.h
-//  JKCategories
+//  CJGCategories
 //
 //  Created by Jakey on 15/8/7.
 //  Copyright © 2015年 www.skyfox.org. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSDictionary (JKURL)
+@interface NSDictionary (CJGURL)
 /**
  *  @brief  将url参数转换成NSDictionary
  *

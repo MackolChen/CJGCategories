@@ -9,9 +9,9 @@
 //https://github.com/yuriy128/NSURLConnection-SelfSigned
 #import <Foundation/Foundation.h>
 
-@interface NSURLConnection (JKSelfSigned)
+@interface NSURLConnection (CJGSelfSigned)
 /**
- *  @author JKCategories
+ *  @author CJGCategories
  *
  *  Sends async request while accepting all self-signed certs
  *

@@ -1,6 +1,6 @@
 //
 //  UIImage+Capture.m
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 15/1/10.
 //  Copyright (c) 2015年 www.skyfox.org. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import "UIImage+CJGCapture.h"
 #import <QuartzCore/QuartzCore.h>
-@implementation UIImage (JKCapture)
+@implementation UIImage (CJGCapture)
 /**
  *  @brief  截图指定view成图片
  *

@@ -1,6 +1,6 @@
 //
 //  MKMapView+ZoomLevel.h
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 15/4/1.
 //  Copyright (c) 2015年 www.skyfox.org. All rights reserved.
@@ -10,7 +10,7 @@
 
 #import <MapKit/MapKit.h>
 
-@interface MKMapView (JKZoomLevel)
+@interface MKMapView (CJGZoomLevel)
 
 - (void)cjg_setCenterCoordinate:(CLLocationCoordinate2D)centerCoordinate
                   zoomLevel:(NSUInteger)zoomLevel

@@ -1,6 +1,6 @@
 //
 //  NSObject+CJGRuntime.m
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 14/12/30.
 //  Copyright (c) 2014年 www.skyfox.org. All rights reserved.
@@ -95,7 +95,7 @@ void cjg_method_replace(Class toClass, Class fromClass, SEL selector)
     class_replaceMethod(toClass, method_getName(method), method_getImplementation(method), method_getTypeEncoding(method));
 }
 
-@implementation NSObject (JKRuntime)
+@implementation NSObject (CJGRuntime)
 
 + (void)cjg_swizzleMethod:(SEL)originalMethod withMethod:(SEL)newMethod
 {

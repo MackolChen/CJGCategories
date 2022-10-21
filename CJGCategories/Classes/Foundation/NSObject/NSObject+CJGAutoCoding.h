@@ -29,7 +29,7 @@
 // 3. This notice may not be removed or altered from any source distribution.
 //
 #import <Foundation/Foundation.h>
-@interface NSObject (JKAutoCoding) <NSSecureCoding>
+@interface NSObject (CJGAutoCoding) <NSSecureCoding>
 //coding
 + (NSDictionary *)cjg_codableProperties;
 - (void)cjg_setWithCoder:(NSCoder *)aDecoder;

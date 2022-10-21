@@ -1,6 +1,6 @@
 //
 //  NSString+CJGMIME.h
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 15/5/22.
 //  Copyright (c) 2015年 www.skyfox.org. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSString (JKMIME)
+@interface NSString (CJGMIME)
 /**
  *  @brief  根据文件url 返回对应的MIMEType
  *

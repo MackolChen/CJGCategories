@@ -10,7 +10,7 @@
 
 #import <libkern/OSAtomic.h>
 
-@implementation UIApplication (JKNetworkActivityIndicator)
+@implementation UIApplication (CJGNetworkActivityIndicator)
 
 static volatile int32_t numberOfActiveNetworkConnectionsxxx;
 

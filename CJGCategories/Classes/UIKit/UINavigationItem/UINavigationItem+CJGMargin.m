@@ -26,7 +26,7 @@
 
 #import "UINavigationItem+CJGMargin.h"
 
-@implementation UINavigationItem (JKMargin)
+@implementation UINavigationItem (CJGMargin)
 
 + (void)load
 {

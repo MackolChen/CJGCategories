@@ -1,6 +1,6 @@
 //
 //  UIControl+CJGActionBlocks.m
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 15/5/23.
 //  Copyright (c) 2015年 www.skyfox.org. All rights reserved.
@@ -9,9 +9,9 @@
 #import "UIControl+CJGActionBlocks.h"
 #import <objc/runtime.h>
 
-static const void *UIControlJKActionBlockArray = &UIControlJKActionBlockArray;
+static const void *UIControlCJGActionBlockArray = &UIControlCJGActionBlockArray;
 
-@implementation UIControlJKActionBlockWrapper
+@implementation UIControlCJGActionBlockWrapper
 
 - (void)cjg_invokeBlock:(id)sender {
     if (self.cjg_actionBlock) {
@@ -21,11 +21,11 @@ static const void *UIControlJKActionBlockArray = &UIControlJKActionBlockArray;
 @end
 
 
-@implementation UIControl (JKActionBlocks)
--(void)cjg_handleControlEvents:(UIControlEvents)controlEvents withBlock:(UIControlJKActionBlock)actionBlock {
+@implementation UIControl (CJGActionBlocks)
+-(void)cjg_handleControlEvents:(UIControlEvents)controlEvents withBlock:(UIControlCJGActionBlock)actionBlock {
     NSMutableArray *actionBlocksArray = [self cjg_actionBlocksArray];
     
-    UIControlJKActionBlockWrapper *blockActionWrapper = [[UIControlJKActionBlockWrapper alloc] init];
+    UIControlCJGActionBlockWrapper *blockActionWrapper = [[UIControlCJGActionBlockWrapper alloc] init];
     blockActionWrapper.cjg_actionBlock = actionBlock;
     blockActionWrapper.cjg_controlEvents = controlEvents;
     [actionBlocksArray addObject:blockActionWrapper];
@@ -39,7 +39,7 @@ static const void *UIControlJKActionBlockArray = &UIControlJKActionBlockArray;
     NSMutableArray *wrappersToRemove = [NSMutableArray arrayWithCapacity:[actionBlocksArray count]];
     
     [actionBlocksArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        UIControlJKActionBlockWrapper *wrapperTmp = obj;
+        UIControlCJGActionBlockWrapper *wrapperTmp = obj;
         if (wrapperTmp.cjg_controlEvents == controlEvents) {
             [wrappersToRemove addObject:wrapperTmp];
             [self removeTarget:wrapperTmp action:@selector(cjg_invokeBlock:) forControlEvents:controlEvents];
@@ -51,10 +51,10 @@ static const void *UIControlJKActionBlockArray = &UIControlJKActionBlockArray;
 
 
 - (NSMutableArray *)cjg_actionBlocksArray {
-    NSMutableArray *actionBlocksArray = objc_getAssociatedObject(self, UIControlJKActionBlockArray);
+    NSMutableArray *actionBlocksArray = objc_getAssociatedObject(self, UIControlCJGActionBlockArray);
     if (!actionBlocksArray) {
         actionBlocksArray = [NSMutableArray array];
-        objc_setAssociatedObject(self, UIControlJKActionBlockArray, actionBlocksArray, OBJC_ASSOCIATION_RETAIN);
+        objc_setAssociatedObject(self, UIControlCJGActionBlockArray, actionBlocksArray, OBJC_ASSOCIATION_RETAIN);
     }
     return actionBlocksArray;
 }

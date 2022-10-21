@@ -8,7 +8,7 @@
 
 #import "UIImageView+CJGReflect.h"
 
-@implementation UIImageView (JKReflect)
+@implementation UIImageView (CJGReflect)
 /**
  *  @brief  倒影
  */

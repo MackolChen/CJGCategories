@@ -1,6 +1,6 @@
 //
 //  NSDictionary+CJGSafeAccess.m
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 15/1/25.
 //  Copyright (c) 2015年 www.skyfox.org. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import "NSDictionary+CJGSafeAccess.h"
 
-@implementation NSDictionary (JKSafeAccess)
+@implementation NSDictionary (CJGSafeAccess)
 - (BOOL)cjg_hasKey:(NSString *)key
 {
     return [self objectForKey:key] != nil;
@@ -301,7 +301,7 @@
 @end
 
 #pragma --mark NSMutableDictionary setter
-@implementation NSMutableDictionary (JKSafeAccess)
+@implementation NSMutableDictionary (CJGSafeAccess)
 -(void)cjg_setObj:(id)i forKey:(NSString*)key{
     if (i!=nil) {
         self[key] = i;

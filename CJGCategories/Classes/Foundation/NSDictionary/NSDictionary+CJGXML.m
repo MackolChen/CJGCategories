@@ -1,6 +1,6 @@
 //
 //  NSDictionary+CJGXML.m
-//  JKCategories
+//  CJGCategories
 //
 //  Created by Jakey on 15/8/7.
 //  Copyright © 2015年 www.skyfox.org. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import "NSDictionary+CJGXML.h"
 
-@implementation NSDictionary (JKXML)
+@implementation NSDictionary (CJGXML)
 /**
  *  @brief  将NSDictionary转换成XML 字符串
  *

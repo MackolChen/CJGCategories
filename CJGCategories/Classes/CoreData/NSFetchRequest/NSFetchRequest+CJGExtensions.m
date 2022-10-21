@@ -7,7 +7,7 @@
 
 #import "NSFetchRequest+CJGExtensions.h"
 
-@implementation NSFetchRequest(JKExtensions)
+@implementation NSFetchRequest(CJGExtensions)
 + (id)cjg_fetchRequestWithEntity:(NSEntityDescription *)entity
 {
   return [[self alloc] initWithEntity:entity predicate:nil sortDescriptors:nil];

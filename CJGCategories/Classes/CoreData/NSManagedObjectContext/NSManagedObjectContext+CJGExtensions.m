@@ -7,7 +7,7 @@
 
 #import "NSManagedObjectContext+CJGExtensions.h"
 
-@implementation NSManagedObjectContext(JKExtensions)
+@implementation NSManagedObjectContext(CJGExtensions)
 
 - (NSManagedObjectModel *)cjg_objectModel
 {

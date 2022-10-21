@@ -8,7 +8,7 @@
 
 #import "NSString+CJGStringPages.h"
 
-@implementation NSString (JKStringPages)
+@implementation NSString (CJGStringPages)
 
 - (NSArray *)cjg_getPagesOfString:(NSString *)cache
                      withFont:(UIFont*)font

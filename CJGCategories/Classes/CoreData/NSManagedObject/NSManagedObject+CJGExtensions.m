@@ -8,7 +8,7 @@
 
 #import "NSManagedObject+CJGExtensions.h"
 
-@implementation NSManagedObject (JKExtensions)
+@implementation NSManagedObject (CJGExtensions)
 
 + (id)cjg_create:(NSManagedObjectContext*)context {
   return [NSEntityDescription insertNewObjectForEntityForName:[self cjg_entityName] inManagedObjectContext:context];

@@ -1,6 +1,6 @@
 //
 //  UIColor+Modify.m
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 15/1/2.
 //  Copyright (c) 2015年 www.skyfox.org. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import "UIColor+CJGModify.h"
 
-@implementation UIColor (JKModify)
+@implementation UIColor (CJGModify)
 - (UIColor *)cjg_invertedColor{
     NSArray *components = [self cjg_componentArray];
     return [UIColor colorWithRed:1-[components[0] doubleValue] green:1-[components[1] doubleValue] blue:1-[components[2] doubleValue] alpha:[components[3] doubleValue]];

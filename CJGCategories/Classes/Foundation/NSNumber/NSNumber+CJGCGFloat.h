@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-@interface NSNumber (JKCGFloat)
+@interface NSNumber (CJGCGFloat)
 
 - (CGFloat)cjg_CGFloatValue;
 
-- (id)initWithJKCGFloat:(CGFloat)value;
+- (id)initWithCJGCGFloat:(CGFloat)value;
 
 + (NSNumber *)cjg_numberWithCGFloat:(CGFloat)value;
 

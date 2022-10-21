@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface UIDevice (JKHardware)
+@interface UIDevice (CJGHardware)
 + (NSString *)cjg_platform;
 + (NSString *)cjg_platformString;
 

@@ -1,6 +1,6 @@
 //
 //  UIImageView+Addition.m
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 14/12/15.
 //  Copyright (c) 2014年 www.skyfox.org. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import "UIImageView+CJGAddition.h"
 
-@implementation UIImageView (JKAddition)
+@implementation UIImageView (CJGAddition)
 + (id)cjg_imageViewWithImageNamed:(NSString*)imageName
 {
     return [[UIImageView alloc] initWithImage:[UIImage imageNamed:imageName]];

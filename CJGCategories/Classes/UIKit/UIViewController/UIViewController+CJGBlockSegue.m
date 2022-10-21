@@ -30,10 +30,10 @@
 
 static const void *UIViewControllerDictionaryBlockKey = &UIViewControllerDictionaryBlockKey;
 
-@implementation UIViewController (JKBlockSegue)
+@implementation UIViewController (CJGBlockSegue)
 
 __attribute__((constructor))
-void JKBlockSegue(void) {
+void CJGBlockSegue(void) {
     Class currentClass = [UIViewController class];
 
     SEL originalSel = @selector(prepareForSegue:sender:);
@@ -56,7 +56,7 @@ void JKBlockSegue(void) {
         return;
     }
 
-    UIViewControllerJKSegueBlock segueBlock = self.jmg_dictionaryBlock[segue.identifier];
+    UIViewControllerCJGSegueBlock segueBlock = self.jmg_dictionaryBlock[segue.identifier];
     segueBlock(sender, segue.destinationViewController, segue);
 }
 
@@ -73,7 +73,7 @@ void JKBlockSegue(void) {
 }
 
 #pragma mark - Public interface
--(void)cjg_configureSegue:(NSString *)identifier withBlock:(UIViewControllerJKSegueBlock)block {
+-(void)cjg_configureSegue:(NSString *)identifier withBlock:(UIViewControllerCJGSegueBlock)block {
     if (!identifier) {
         @throw [NSException exceptionWithName:NSInvalidArgumentException reason:@"Segue identifier can not be nil" userInfo:nil];
     }
@@ -86,7 +86,7 @@ void JKBlockSegue(void) {
     [dBlocks setObject:block forKey:identifier];
 }
 
--(void)cjg_performSegueWithIdentifier:(NSString *)identifier sender:(id)sender withBlock:(UIViewControllerJKSegueBlock)block {
+-(void)cjg_performSegueWithIdentifier:(NSString *)identifier sender:(id)sender withBlock:(UIViewControllerCJGSegueBlock)block {
     if (!identifier) {
         @throw [NSException exceptionWithName:NSInvalidArgumentException reason:@"Segue identifier can not be nil" userInfo:nil];
     }

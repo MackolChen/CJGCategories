@@ -16,7 +16,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 #pragma mark - Interface
 
-@interface UIViewController (JKStoreKit)
+@interface UIViewController (CJGStoreKit)
 
 @property NSString *cjg_campaignToken;
 @property (nonatomic, copy) void (^cjg_loadingStoreKitItemBlock)(void);

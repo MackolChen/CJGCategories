@@ -20,7 +20,7 @@
 #import "UIFont+CJGTTF.h"
 #import <CoreText/CoreText.h>
 
-@implementation UIFont (JKTTF)
+@implementation UIFont (CJGTTF)
 
 + (UIFont *)cjg_fontWithTTFAtURL:(NSURL *)URL size:(CGFloat)size{
 	BOOL isLocalFile = [URL isFileURL];

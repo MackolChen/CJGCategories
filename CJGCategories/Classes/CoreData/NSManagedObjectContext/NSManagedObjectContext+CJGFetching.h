@@ -6,7 +6,7 @@
 //
 #import <CoreData/CoreData.h>
 
-@interface NSManagedObjectContext(JKFetching)
+@interface NSManagedObjectContext(CJGFetching)
 /* Fetch one object using given key and value. Usefull to fetch objects on their uid key 
  * /!\ Warning, errors are ignored /!\
  */

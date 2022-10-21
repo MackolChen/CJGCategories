@@ -9,17 +9,17 @@
 
 #import "NSString+CJGScore.h"
 
-@implementation NSString (JKScore)
+@implementation NSString (CJGScore)
 
 - (CGFloat)cjg_scoreAgainst:(NSString *)otherString{
     return [self cjg_scoreAgainst:otherString fuzziness:nil];
 }
 
 - (CGFloat)cjg_scoreAgainst:(NSString *)otherString fuzziness:(NSNumber *)fuzziness{
-    return [self cjg_scoreAgainst:otherString fuzziness:fuzziness options:NSStringJKScoreOptionNone];
+    return [self cjg_scoreAgainst:otherString fuzziness:fuzziness options:NSStringCJGScoreOptionNone];
 }
 
-- (CGFloat)cjg_scoreAgainst:(NSString *)anotherString fuzziness:(NSNumber *)fuzziness options:(NSStringJKScoreOption)options{
+- (CGFloat)cjg_scoreAgainst:(NSString *)anotherString fuzziness:(NSNumber *)fuzziness options:(NSStringCJGScoreOption)options{
     NSMutableCharacterSet *workingInvalidCharacterSet = [NSMutableCharacterSet lowercaseLetterCharacterSet];
     [workingInvalidCharacterSet formUnionWithCharacterSet:[NSCharacterSet uppercaseLetterCharacterSet]];
     [workingInvalidCharacterSet addCharactersInString:@" "];
@@ -109,14 +109,14 @@
         totalCharacterScore += characterScore;
     }
     
-    if(NSStringJKScoreOptionFavorSmallerWords == (options & NSStringJKScoreOptionFavorSmallerWords)){
+    if(NSStringCJGScoreOptionFavorSmallerWords == (options & NSStringCJGScoreOptionFavorSmallerWords)){
         // Weigh smaller words higher
         return totalCharacterScore / stringLength;
     } 
     
     otherStringScore = totalCharacterScore / otherStringLength;
     
-    if(NSStringJKScoreOptionReducedLongStringPenalty == (options & NSStringJKScoreOptionReducedLongStringPenalty)){
+    if(NSStringCJGScoreOptionReducedLongStringPenalty == (options & NSStringCJGScoreOptionReducedLongStringPenalty)){
         // Reduce the penalty for longer words
         CGFloat percentageOfMatchedString = otherStringLength / stringLength;
         CGFloat wordScore = otherStringScore * percentageOfMatchedString;

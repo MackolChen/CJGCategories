@@ -14,7 +14,7 @@ typedef void (^ContextObjectCallback)(NSManagedObjectContext *context, id object
 typedef void (^ContextObjectsCallback)(NSManagedObjectContext *context, NSArray *objects);
 
 
-@interface NSManagedObjectContext(JKExtensions)
+@interface NSManagedObjectContext(CJGExtensions)
 
 #pragma mark - Conveince Property
 @property (nonatomic, readonly) NSManagedObjectModel *cjg_objectModel;

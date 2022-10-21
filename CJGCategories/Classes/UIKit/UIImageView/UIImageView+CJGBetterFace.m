@@ -19,7 +19,7 @@
 
 static CIDetector *cjg_detector;
 
-@implementation UIImageView (JKBetterFace)
+@implementation UIImageView (CJGBetterFace)
 
 void cjg_hack_uiimageview_bf(){
     Method oriSetImgMethod = class_getInstanceMethod([UIImageView class], @selector(setImage:));

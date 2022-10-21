@@ -1,6 +1,6 @@
 //
 //  NSDate+Utilities.m
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 14/12/30.
 //  Copyright (c) 2014年 www.skyfox.org. All rights reserved.
@@ -9,7 +9,7 @@
 #import "NSDate+CJGUtilities.h"
 #define DATE_COMPONENTS (NSYearCalendarUnit| NSMonthCalendarUnit | NSDayCalendarUnit | NSWeekCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit | NSWeekdayCalendarUnit | NSWeekdayOrdinalCalendarUnit)
 #define CURRENT_CALENDAR [NSCalendar currentCalendar]
-@implementation NSDate (JKUtilities)
+@implementation NSDate (CJGUtilities)
 
 + (NSCalendar *)cjg_currentCalendar
 {

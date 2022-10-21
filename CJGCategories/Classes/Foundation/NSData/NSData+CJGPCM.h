@@ -1,6 +1,6 @@
 //
 //  NSData+CJGPCM.h
-//  JKCategories-Demo
+//  CJGCategories-Demo
 //
 //  Created by Jakey on 16/6/5.
 //  Copyright © 2016年 www.skyfox.org. All rights reserved.
@@ -20,7 +20,7 @@ _format.mFramesPerPacket = 1;
 _format.mSampleRate = 8000.0f;
 */
 
-@interface NSData (JKPCM)
+@interface NSData (CJGPCM)
 /// format wav data
 /// - Parameter PCMFormat: format of pcm
 - (NSData *)cjg_wavDataWithPCMFormat:(AudioStreamBasicDescription)PCMFormat;

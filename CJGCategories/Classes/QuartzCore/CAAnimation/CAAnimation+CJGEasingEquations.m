@@ -322,7 +322,7 @@ static EasingFunction easeInOutBounce = ^CGFloat(CGFloat t, CGFloat b, CGFloat c
 };
 
 
-@implementation CAAnimation (JKEasingEquations)
+@implementation CAAnimation (CJGEasingEquations)
 
 + (EasingFunction)blockForCAAnimationEasingFunction:(CAAnimationEasingFunction)easingFunction
 {

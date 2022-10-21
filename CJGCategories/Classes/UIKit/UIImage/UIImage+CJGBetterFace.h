@@ -10,14 +10,14 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NS_ENUM(NSUInteger, JKAccuracy) {
-    JKAccuracyLow = 0,
-    JKAccuracyHigh,
+typedef NS_ENUM(NSUInteger, CJGAccuracy) {
+    CJGAccuracyLow = 0,
+    CJGAccuracyHigh,
 };
 
-@interface UIImage (JKBetterFace)
+@interface UIImage (CJGBetterFace)
 
 - (UIImage *)cjg_betterFaceImageForSize:(CGSize)size
-                           accuracy:(JKAccuracy)accurary;
+                           accuracy:(CJGAccuracy)accurary;
 
 @end

@@ -1,6 +1,6 @@
 //
 //  NSData+CJGAPNSToken.m
-//  JKCategories
+//  CJGCategories
 //
 //  Created by Jakey on 15/8/7.
 //  Copyright © 2015年 www.skyfox.org. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import "NSData+CJGAPNSToken.h"
 
-@implementation NSData (JKAPNSToken)
+@implementation NSData (CJGAPNSToken)
 /**
  *  @brief  将APNS NSData类型token 格式化成字符串
  *

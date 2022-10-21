@@ -1,6 +1,6 @@
 //
 //  NSArray+CJGSafeAccess.h
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 15/2/8.
 //  Copyright (c) 2015年 www.skyfox.org. All rights reserved.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface NSArray (JKSafeAccess)
+@interface NSArray (CJGSafeAccess)
 -(id)cjg_objectWithIndex:(NSUInteger)index;
 
 - (NSString*)cjg_stringWithIndex:(NSUInteger)index;
@@ -56,7 +56,7 @@
 
 #pragma --mark NSMutableArray setter
 
-@interface NSMutableArray(JKSafeAccess)
+@interface NSMutableArray(CJGSafeAccess)
 
 -(void)cjg_addObj:(id)i;
 

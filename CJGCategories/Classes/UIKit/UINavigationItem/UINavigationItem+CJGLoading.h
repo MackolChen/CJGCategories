@@ -26,29 +26,29 @@
 /**
  *  Position to show UIActivityIndicatorView in a navigation bar
  */
-typedef NS_ENUM(NSUInteger, JKNavBarLoaderPosition){
+typedef NS_ENUM(NSUInteger, CJGNavBarLoaderPosition){
     /**
      *  Will show UIActivityIndicatorView in place of title view
      */
-    JKNavBarLoaderPositionCenter = 0,
+    CJGNavBarLoaderPositionCenter = 0,
     /**
      *  Will show UIActivityIndicatorView in place of left item
      */
-    JKNavBarLoaderPositionLeft,
+    CJGNavBarLoaderPositionLeft,
     /**
      *  Will show UIActivityIndicatorView in place of right item
      */
-    JKNavBarLoaderPositionRight
+    CJGNavBarLoaderPositionRight
 };
 
-@interface UINavigationItem (JKLoading)
+@interface UINavigationItem (CJGLoading)
 
 /**
  *  Add UIActivityIndicatorView to view hierarchy and start animating immediately
  *
  *  @param position Left, center or right
  */
-- (void)cjg_startAnimatingAt:(JKNavBarLoaderPosition)position;
+- (void)cjg_startAnimatingAt:(CJGNavBarLoaderPosition)position;
 
 /**
  *  Stop animating, remove UIActivityIndicatorView from view hierarchy and restore item

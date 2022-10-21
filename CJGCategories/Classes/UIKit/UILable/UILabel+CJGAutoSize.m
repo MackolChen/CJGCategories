@@ -1,6 +1,6 @@
 //
 //  UILabel+AutoSize.m
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 15/5/22.
 //  Copyright (c) 2015年 www.skyfox.org. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import "UILabel+CJGAutoSize.h"
 
-@implementation UILabel (JKAutoSize)
+@implementation UILabel (CJGAutoSize)
 -(UILabel *)cjg_resizeLabelHorizontal{
     return [self cjg_resizeLabelHorizontal:0];
 }

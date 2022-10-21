@@ -23,34 +23,34 @@
 #import "UINavigationItem+CJGLoading.h"
 #import <objc/runtime.h>
 
-static void *JKLoaderPositionAssociationKey = &JKLoaderPositionAssociationKey;
-static void *JKSubstitutedViewAssociationKey = &JKSubstitutedViewAssociationKey;
+static void *CJGLoaderPositionAssociationKey = &CJGLoaderPositionAssociationKey;
+static void *CJGSubstitutedViewAssociationKey = &CJGSubstitutedViewAssociationKey;
 
-@implementation UINavigationItem (JKLoading)
+@implementation UINavigationItem (CJGLoading)
 
-- (void)cjg_startAnimatingAt:(JKNavBarLoaderPosition)position {
+- (void)cjg_startAnimatingAt:(CJGNavBarLoaderPosition)position {
     // stop previous if animated
     [self cjg_stopAnimating];
     
     // hold reference for position to stop at the right place
-    objc_setAssociatedObject(self, JKLoaderPositionAssociationKey, @(position), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, CJGLoaderPositionAssociationKey, @(position), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     
     UIActivityIndicatorView* loader = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
     
     // substitute bar views to loader and hold reference to them for restoration
     switch (position) {
-        case JKNavBarLoaderPositionLeft:
-            objc_setAssociatedObject(self, JKSubstitutedViewAssociationKey, self.leftBarButtonItem.customView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        case CJGNavBarLoaderPositionLeft:
+            objc_setAssociatedObject(self, CJGSubstitutedViewAssociationKey, self.leftBarButtonItem.customView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
             self.leftBarButtonItem.customView = loader;
             break;
             
-        case JKNavBarLoaderPositionCenter:
-            objc_setAssociatedObject(self, JKSubstitutedViewAssociationKey, self.titleView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        case CJGNavBarLoaderPositionCenter:
+            objc_setAssociatedObject(self, CJGSubstitutedViewAssociationKey, self.titleView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
             self.titleView = loader;
             break;
             
-        case JKNavBarLoaderPositionRight:
-            objc_setAssociatedObject(self, JKSubstitutedViewAssociationKey, self.rightBarButtonItem.customView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        case CJGNavBarLoaderPositionRight:
+            objc_setAssociatedObject(self, CJGSubstitutedViewAssociationKey, self.rightBarButtonItem.customView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
             self.rightBarButtonItem.customView = loader;
             break;
     }
@@ -59,28 +59,28 @@ static void *JKSubstitutedViewAssociationKey = &JKSubstitutedViewAssociationKey;
 }
 
 - (void)cjg_stopAnimating {
-    NSNumber* positionToRestore = objc_getAssociatedObject(self, JKLoaderPositionAssociationKey);
-    id componentToRestore = objc_getAssociatedObject(self, JKSubstitutedViewAssociationKey);
+    NSNumber* positionToRestore = objc_getAssociatedObject(self, CJGLoaderPositionAssociationKey);
+    id componentToRestore = objc_getAssociatedObject(self, CJGSubstitutedViewAssociationKey);
     
     // restore UI if animation was in a progress
     if (positionToRestore) {
         switch (positionToRestore.intValue) {
-            case JKNavBarLoaderPositionLeft:
+            case CJGNavBarLoaderPositionLeft:
                 self.leftBarButtonItem.customView = componentToRestore;
                 break;
                 
-            case JKNavBarLoaderPositionCenter:
+            case CJGNavBarLoaderPositionCenter:
                 self.titleView = componentToRestore;
                 break;
                 
-            case JKNavBarLoaderPositionRight:
+            case CJGNavBarLoaderPositionRight:
                 self.rightBarButtonItem.customView = componentToRestore;
                 break;
         }
     }
     
-    objc_setAssociatedObject(self, JKLoaderPositionAssociationKey, nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    objc_setAssociatedObject(self, JKSubstitutedViewAssociationKey, nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, CJGLoaderPositionAssociationKey, nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, CJGSubstitutedViewAssociationKey, nil, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 @end

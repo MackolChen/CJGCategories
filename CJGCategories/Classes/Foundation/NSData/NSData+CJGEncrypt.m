@@ -1,6 +1,6 @@
 //
 //  NSData+CJGEncrypt.m
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 14/12/15.
 //  Copyright (c) 2014年 www.skyfox.org. All rights reserved.
@@ -9,7 +9,7 @@
 #import "NSData+CJGEncrypt.h"
 #import <CommonCrypto/CommonCryptor.h>
 
-@implementation NSData (JKEncrypt)
+@implementation NSData (CJGEncrypt)
 /**
  *  利用AES加密数据
  *

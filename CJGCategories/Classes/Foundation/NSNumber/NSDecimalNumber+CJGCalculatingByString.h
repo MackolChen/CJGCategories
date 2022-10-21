@@ -9,9 +9,9 @@
 //https://github.com/adi-li/NSDecimalNumber-StringCalculation
 #import <Foundation/Foundation.h>
 
-@interface NSDecimalNumber (JKCalculatingByString)
+@interface NSDecimalNumber (CJGCalculatingByString)
 /**
- *  @author JKCategories
+ *  @author CJGCategories
  *
  *   use string calculation for nsdecimalnumber, for simplicity when doing much calculation works. 
  *

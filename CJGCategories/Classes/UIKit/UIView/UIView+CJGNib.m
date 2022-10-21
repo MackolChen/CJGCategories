@@ -1,6 +1,6 @@
 //
 //  UIView+Nib.m
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 14/12/15.
 //  Copyright (c) 2014年 www.skyfox.org. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import "UIView+CJGNib.h"
 
-@implementation UIView (JKNib)
+@implementation UIView (CJGNib)
 #pragma mark - Nibs
 + (UINib *)cjg_loadNib
 {

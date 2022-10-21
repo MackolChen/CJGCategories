@@ -1,6 +1,6 @@
 //
 //  UIView+UIView_BlockGesture.m
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 14/12/30.
 //  Copyright (c) 2014年 www.skyfox.org. All rights reserved.
@@ -13,8 +13,8 @@ static char cjg_kActionHandlerTapGestureKey;
 static char cjg_kActionHandlerLongPressBlockKey;
 static char cjg_kActionHandlerLongPressGestureKey;
 
-@implementation UIView (JKBlockGesture)
-- (void)cjg_addTapActionWithBlock:(JKGestureActionBlock)block
+@implementation UIView (CJGBlockGesture)
+- (void)cjg_addTapActionWithBlock:(CJGGestureActionBlock)block
 {
     UITapGestureRecognizer *gesture = objc_getAssociatedObject(self, &cjg_kActionHandlerTapGestureKey);
     if (!gesture)
@@ -29,14 +29,14 @@ static char cjg_kActionHandlerLongPressGestureKey;
 {
     if (gesture.state == UIGestureRecognizerStateRecognized)
     {
-        JKGestureActionBlock block = objc_getAssociatedObject(self, &cjg_kActionHandlerTapBlockKey);
+        CJGGestureActionBlock block = objc_getAssociatedObject(self, &cjg_kActionHandlerTapBlockKey);
         if (block)
         {
             block(gesture);
         }
     }
 }
-- (void)cjg_addLongPressActionWithBlock:(JKGestureActionBlock)block
+- (void)cjg_addLongPressActionWithBlock:(CJGGestureActionBlock)block
 {
     UILongPressGestureRecognizer *gesture = objc_getAssociatedObject(self, &cjg_kActionHandlerLongPressGestureKey);
     if (!gesture)
@@ -51,7 +51,7 @@ static char cjg_kActionHandlerLongPressGestureKey;
 {
     if (gesture.state == UIGestureRecognizerStateRecognized)
     {
-        JKGestureActionBlock block = objc_getAssociatedObject(self, &cjg_kActionHandlerLongPressBlockKey);
+        CJGGestureActionBlock block = objc_getAssociatedObject(self, &cjg_kActionHandlerLongPressBlockKey);
         if (block)
         {
             block(gesture);

@@ -37,7 +37,7 @@
 // internal framework use
 // UIControlEventAllEvents           = 0xFFFFFFFF
 
-#define cjg_UICONTROL_EVENT(methodName, eventName)                                \
+#define CJG_UICONTROL_EVENT(methodName, eventName)                                \
 -(void)methodName : (void (^)(void))eventBlock {                              \
     objc_setAssociatedObject(self, @selector(methodName:), eventBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);\
     [self addTarget:self                                                        \
@@ -55,22 +55,22 @@
 
 @end
 
-@implementation UIControl (JKBlock)
+@implementation UIControl (CJGBlock)
 
-cjg_UICONTROL_EVENT(cjg_touchDown, TouchDown)
-cjg_UICONTROL_EVENT(cjg_touchDownRepeat, TouchDownRepeat)
-cjg_UICONTROL_EVENT(cjg_touchDragInside, TouchDragInside)
-cjg_UICONTROL_EVENT(cjg_touchDragOutside, TouchDragOutside)
-cjg_UICONTROL_EVENT(cjg_touchDragEnter, TouchDragEnter)
-cjg_UICONTROL_EVENT(cjg_touchDragExit, TouchDragExit)
-cjg_UICONTROL_EVENT(cjg_touchUpInside, TouchUpInside)
-cjg_UICONTROL_EVENT(cjg_touchUpOutside, TouchUpOutside)
-cjg_UICONTROL_EVENT(cjg_touchCancel, TouchCancel)
-cjg_UICONTROL_EVENT(cjg_valueChanged, ValueChanged)
-cjg_UICONTROL_EVENT(cjg_editingDidBegin, EditingDidBegin)
-cjg_UICONTROL_EVENT(cjg_editingChanged, EditingChanged)
-cjg_UICONTROL_EVENT(cjg_editingDidEnd, EditingDidEnd)
-cjg_UICONTROL_EVENT(cjg_editingDidEndOnExit, EditingDidEndOnExit)
+CJG_UICONTROL_EVENT(cjg_touchDown, TouchDown)
+CJG_UICONTROL_EVENT(cjg_touchDownRepeat, TouchDownRepeat)
+CJG_UICONTROL_EVENT(cjg_touchDragInside, TouchDragInside)
+CJG_UICONTROL_EVENT(cjg_touchDragOutside, TouchDragOutside)
+CJG_UICONTROL_EVENT(cjg_touchDragEnter, TouchDragEnter)
+CJG_UICONTROL_EVENT(cjg_touchDragExit, TouchDragExit)
+CJG_UICONTROL_EVENT(cjg_touchUpInside, TouchUpInside)
+CJG_UICONTROL_EVENT(cjg_touchUpOutside, TouchUpOutside)
+CJG_UICONTROL_EVENT(cjg_touchCancel, TouchCancel)
+CJG_UICONTROL_EVENT(cjg_valueChanged, ValueChanged)
+CJG_UICONTROL_EVENT(cjg_editingDidBegin, EditingDidBegin)
+CJG_UICONTROL_EVENT(cjg_editingChanged, EditingChanged)
+CJG_UICONTROL_EVENT(cjg_editingDidEnd, EditingDidEnd)
+CJG_UICONTROL_EVENT(cjg_editingDidEndOnExit, EditingDidEndOnExit)
 
 //- (void)touchUpInside:(void (^)(void))eventBlock {
 //   objc_setAssociatedObject(self, @selector(touchUpInside:, eventBlock, OBJC_ASSOCIATION_COPY_NONATOMIC);

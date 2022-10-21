@@ -1,6 +1,6 @@
 //
 //  UITableView+iOS7Style.m
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 15/6/1.
 //  Copyright (c) 2015年 www.skyfox.org. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import "UITableView+CJGiOS7Style.h"
 
-@implementation UITableView (JKiOS7Style)
+@implementation UITableView (CJGiOS7Style)
 // http://stackoverflow.com/questions/18822619/ios-7-tableview-like-in-settings-app-on-ipad
 /**
  *  @brief  ios7设置页面的UITableViewCell样式

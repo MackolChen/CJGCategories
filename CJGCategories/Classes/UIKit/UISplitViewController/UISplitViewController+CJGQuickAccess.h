@@ -17,7 +17,7 @@
  topViewController property.
  */
 
-@interface UISplitViewController (JKQuickAccess)
+@interface UISplitViewController (CJGQuickAccess)
 
 @property (weak, readonly, nonatomic) UIViewController *cjg_leftController;
 @property (weak, readonly, nonatomic) UIViewController *cjg_rightController;

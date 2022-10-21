@@ -25,7 +25,7 @@
 #import <objc/runtime.h>
 #import "NSManagedObject+CJGDictionary.h"
 
-@implementation NSManagedObject (JKDictionaryt)
+@implementation NSManagedObject (CJGDictionaryt)
 
 - (NSDictionary *)cjg_toDictionary {
     unsigned int count;

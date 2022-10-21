@@ -1,6 +1,6 @@
 //
 //  NSData+CJGBase64.m
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 15/1/26.
 //  Copyright (c) 2015年 www.skyfox.org. All rights reserved.
@@ -10,7 +10,7 @@
 #pragma GCC diagnostic ignored "-Wselector"
 #import <Availability.h>
 
-@implementation NSData (JKBase64)
+@implementation NSData (CJGBase64)
 /**
  *  @brief  字符串base64后转data
  *

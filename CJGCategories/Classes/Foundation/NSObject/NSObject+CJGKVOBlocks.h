@@ -25,15 +25,15 @@
 // This class is based on NSObject+KVOBlocks (MIT licensed) by Stephan Leroux.
 // See here: https://github.com/sleroux/KVO-Blocks
 #import <Foundation/Foundation.h>
-typedef void (^JKKVOBlock)(NSDictionary *change, void *context);
+typedef void (^CJGKVOBlock)(NSDictionary *change, void *context);
 
-@interface NSObject (JKKVOBlocks)
+@interface NSObject (CJGKVOBlocks)
 
 - (void)cjg_addObserver:(NSObject *)observer
          forKeyPath:(NSString *)keyPath
             options:(NSKeyValueObservingOptions)options
             context:(void *)context
-          withBlock:(JKKVOBlock)block;
+          withBlock:(CJGKVOBlock)block;
 
 -(void)cjg_removeBlockObserver:(NSObject *)observer
                 forKeyPath:(NSString *)keyPath;
@@ -41,7 +41,7 @@ typedef void (^JKKVOBlock)(NSDictionary *change, void *context);
 -(void)cjg_addObserverForKeyPath:(NSString *)keyPath
                      options:(NSKeyValueObservingOptions)options
                      context:(void *)context
-                   withBlock:(JKKVOBlock)block;
+                   withBlock:(CJGKVOBlock)block;
 
 -(void)cjg_removeBlockObserverForKeyPath:(NSString *)keyPath;
 

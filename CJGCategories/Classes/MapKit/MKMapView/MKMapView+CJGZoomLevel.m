@@ -1,6 +1,6 @@
 //
 //  MKMapView+ZoomLevel.m
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 15/4/1.
 //  Copyright (c) 2015年 www.skyfox.org. All rights reserved.
@@ -13,7 +13,7 @@
 #define CJG_MERCATOR_OFFSET 268435456
 #define CJG_MERCATOR_RADIUS 85445659.44705395
 
-@implementation MKMapView (JKZoomLevel)
+@implementation MKMapView (CJGZoomLevel)
 
 #pragma mark -
 #pragma mark Map conversion methods

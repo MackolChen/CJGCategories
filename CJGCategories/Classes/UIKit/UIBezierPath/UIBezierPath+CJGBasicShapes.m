@@ -8,7 +8,7 @@
 
 #import "UIBezierPath+CJGBasicShapes.h"
 
-@implementation UIBezierPath (JKBasicShapes)
+@implementation UIBezierPath (CJGBasicShapes)
 
 + (CGRect)cjg_maximumSquareFrameThatFits:(CGRect)frame;
 {

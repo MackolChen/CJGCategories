@@ -13,34 +13,34 @@
 #import <CoreLocation/CoreLocation.h>
 
 typedef enum {
-    JKPermissionTypeBluetoothLE,
-    JKPermissionTypeCalendar,
-    JKPermissionTypeContacts,
-    JKPermissionTypeLocation,
-    JKPermissionTypeMicrophone,
-    JKPermissionTypeMotion,
-    JKPermissionTypePhotos,
-    JKPermissionTypeReminders,
-} JKPermissionType;
+    CJGPermissionTypeBluetoothLE,
+    CJGPermissionTypeCalendar,
+    CJGPermissionTypeContacts,
+    CJGPermissionTypeLocation,
+    CJGPermissionTypeMicrophone,
+    CJGPermissionTypeMotion,
+    CJGPermissionTypePhotos,
+    CJGPermissionTypeReminders,
+} CJGPermissionType;
 
 typedef enum {
-    JKPermissionAccessDenied, //User has rejected feature
-    JKPermissionAccessGranted, //User has accepted feature
-    JKPermissionAccessRestricted, //Blocked by parental controls or system settings
-    JKPermissionAccessUnknown, //Cannot be determined
-    JKPermissionAccessUnsupported, //Device doesn't support this - e.g Core Bluetooth
-    JKPermissionAccessMissingFramework, //Developer didn't import the required framework to the project
-} JKPermissionAccess;
+    CJGPermissionAccessDenied, //User has rejected feature
+    CJGPermissionAccessGranted, //User has accepted feature
+    CJGPermissionAccessRestricted, //Blocked by parental controls or system settings
+    CJGPermissionAccessUnknown, //Cannot be determined
+    CJGPermissionAccessUnsupported, //Device doesn't support this - e.g Core Bluetooth
+    CJGPermissionAccessMissingFramework, //Developer didn't import the required framework to the project
+} CJGPermissionAccess;
 
-@interface UIApplication (JKPermissions)
+@interface UIApplication (CJGPermissions)
 
 //Check permission of service. Cannot check microphone or motion without asking user for permission
--(JKPermissionAccess)cjg_hasAccessToBluetoothLE;
--(JKPermissionAccess)cjg_hasAccessToCalendar;
--(JKPermissionAccess)cjg_hasAccessToContacts;
--(JKPermissionAccess)cjg_hasAccessToLocation;
--(JKPermissionAccess)cjg_hasAccessToPhotos;
--(JKPermissionAccess)cjg_hasAccessToReminders;
+-(CJGPermissionAccess)cjg_hasAccessToBluetoothLE;
+-(CJGPermissionAccess)cjg_hasAccessToCalendar;
+-(CJGPermissionAccess)cjg_hasAccessToContacts;
+-(CJGPermissionAccess)cjg_hasAccessToLocation;
+-(CJGPermissionAccess)cjg_hasAccessToPhotos;
+-(CJGPermissionAccess)cjg_hasAccessToReminders;
 
 //Request permission with callback
 -(void)cjg_requestAccessToCalendarWithSuccess:(void(^)(void))accessGranted andFailure:(void(^)(void))accessDenied;

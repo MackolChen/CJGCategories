@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIButton (JKCountDown)
+@interface UIButton (CJGCountDown)
 -(void)cjg_startTime:(NSInteger )timeout title:(NSString *)tittle waitTittle:(NSString *)waitTittle;
 @end

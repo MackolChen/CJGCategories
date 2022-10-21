@@ -8,7 +8,7 @@
 
 #import "UITableViewCell+CJGDelaysContentTouches.h"
 
-@implementation UITableViewCell (JKDelaysContentTouches)
+@implementation UITableViewCell (CJGDelaysContentTouches)
 
 - (UIScrollView*) cjg_scrollView
 {

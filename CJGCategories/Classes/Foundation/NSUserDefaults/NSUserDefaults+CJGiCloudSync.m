@@ -9,7 +9,7 @@
 #import "NSUserDefaults+CJGiCloudSync.h"
 
 
-@implementation NSUserDefaults (JKiCloudSync)
+@implementation NSUserDefaults (CJGiCloudSync)
 
 
 -(void)cjg_setValue:(id)value forKey:(NSString *)key iCloudSync:(BOOL)sync

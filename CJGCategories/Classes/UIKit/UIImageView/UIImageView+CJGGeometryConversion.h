@@ -18,7 +18,7 @@
 #import <UIKit/UIKit.h>
 
 
-@interface UIImageView (JKGeometryConversion)
+@interface UIImageView (CJGGeometryConversion)
 
 - (CGPoint)cjg_convertPointFromImage:(CGPoint)imagePoint;
 - (CGRect)cjg_convertRectFromImage:(CGRect)imageRect;

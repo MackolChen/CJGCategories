@@ -7,16 +7,16 @@
 
 #import "NSTimer+CJGBlocks.h"
 
-@implementation NSTimer (JKBlocks)
+@implementation NSTimer (CJGBlocks)
 
-+(id)cjg_scheduledTimerWithTimeInterval:(NSTimeInterval)inTimeInterval block:(void (^)())inBlock repeats:(BOOL)inRepeats
++(id)cjg_scheduledTimerWithTimeInterval:(NSTimeInterval)inTimeInterval block:(void (^)(void))inBlock repeats:(BOOL)inRepeats
 {
     void (^block)() = [inBlock copy];
     id ret = [self scheduledTimerWithTimeInterval:inTimeInterval target:self selector:@selector(cjg_jdExecuteSimpleBlock:) userInfo:block repeats:inRepeats];
     return ret;
 }
 
-+(id)cjg_timerWithTimeInterval:(NSTimeInterval)inTimeInterval block:(void (^)())inBlock repeats:(BOOL)inRepeats
++(id)cjg_timerWithTimeInterval:(NSTimeInterval)inTimeInterval block:(void (^)(void))inBlock repeats:(BOOL)inRepeats
 {
     void (^block)() = [inBlock copy];
     id ret = [self timerWithTimeInterval:inTimeInterval target:self selector:@selector(cjg_jdExecuteSimpleBlock:) userInfo:block repeats:inRepeats];
@@ -27,7 +27,7 @@
 {
     if([inTimer userInfo])
     {
-        void (^block)() = (void (^)())[inTimer userInfo];
+        void (^block)() = (void (^)(void))[inTimer userInfo];
         block();
     }
 }

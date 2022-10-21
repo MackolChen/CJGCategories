@@ -1,6 +1,6 @@
 //
 //  NSData+CJGGzip.m
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 14/12/30.
 //  Copyright (c) 2014年 www.skyfox.org. All rights reserved.
@@ -10,7 +10,7 @@
 #import <zlib.h>
 #import <dlfcn.h>
 
-@implementation NSData (JKGzip)
+@implementation NSData (CJGGzip)
 
 static void *cjg_libzOpen()
 {

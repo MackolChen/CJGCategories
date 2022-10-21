@@ -7,7 +7,7 @@
 
 #import "NSFileHandle+CJGReadLine.h"
 
-@implementation NSFileHandle (JKReadLine)
+@implementation NSFileHandle (CJGReadLine)
 /**
  *  @brief   A Cocoa / Objective-C NSFileHandle category that adds the ability to read a file line by line.
  

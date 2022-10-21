@@ -30,7 +30,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIImageView (JKLetters)
+@interface UIImageView (CJGLetters)
 
 /**
  Sets the image property of the view based on initial text. A random background color is automatically generated.

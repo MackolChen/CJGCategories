@@ -8,7 +8,7 @@
 //  http://stackoverflow.com/questions/2437875/target-action-uicontrolevents
 #import <UIKit/UIKit.h>
 
-@interface UIControl (JKBlock)
+@interface UIControl (CJGBlock)
 
 - (void)cjg_touchDown:(void (^)(void))eventBlock;
 - (void)cjg_touchDownRepeat:(void (^)(void))eventBlock;

@@ -1,6 +1,6 @@
 //
 //  NSObject+CJGAppInfo.m
-//  JKCategories
+//  CJGCategories
 //
 //  Created by nidom on 15/9/29.
 //  Copyright © 2015年 www.skyfox.org. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import "NSObject+CJGAppInfo.h"
 #import <sys/utsname.h>
-@implementation NSObject (JKAppInfo)
+@implementation NSObject (CJGAppInfo)
 
 -(NSString *)cjg_version{
     NSDictionary *infoDictionary = [[NSBundle mainBundle] infoDictionary];

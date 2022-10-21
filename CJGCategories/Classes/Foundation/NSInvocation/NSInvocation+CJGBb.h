@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSInvocation (JKBb)
+@interface NSInvocation (CJGBb)
 
 
 + (id)cjg_doInstanceMethodTarget:(id)target

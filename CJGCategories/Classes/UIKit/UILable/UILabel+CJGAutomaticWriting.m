@@ -28,7 +28,7 @@ static char kAutomaticWritingOperationQueueKey;
 static char kAutomaticWritingEdgeInsetsKey;
 
 
-@implementation UILabel (JKAutomaticWriting)
+@implementation UILabel (CJGAutomaticWriting)
 
 @dynamic cjg_automaticWritingOperationQueue, cjg_edgeInsets;
 
@@ -100,30 +100,30 @@ static char kAutomaticWritingEdgeInsetsKey;
 
 - (void)cjg_setTextWithAutomaticWritingAnimation:(NSString *)text
 {
-    [self cjg_setText:text automaticWritingAnimationWithBlinkingMode:UILabelJKlinkingModeNone];
+    [self cjg_setText:text automaticWritingAnimationWithBlinkingMode:UILabelCJGlinkingModeNone];
 }
 
-- (void)cjg_setText:(NSString *)text automaticWritingAnimationWithBlinkingMode:(UILabelJKlinkingMode)blinkingMode
+- (void)cjg_setText:(NSString *)text automaticWritingAnimationWithBlinkingMode:(UILabelCJGlinkingMode)blinkingMode
 {
     [self cjg_setText:text automaticWritingAnimationWithDuration:UILabelAWDefaultDuration blinkingMode:blinkingMode];
 }
 
 - (void)cjg_setText:(NSString *)text automaticWritingAnimationWithDuration:(NSTimeInterval)duration
 {
-    [self cjg_setText:text automaticWritingAnimationWithDuration:duration blinkingMode:UILabelJKlinkingModeNone];
+    [self cjg_setText:text automaticWritingAnimationWithDuration:duration blinkingMode:UILabelCJGlinkingModeNone];
 }
 
-- (void)cjg_setText:(NSString *)text automaticWritingAnimationWithDuration:(NSTimeInterval)duration blinkingMode:(UILabelJKlinkingMode)blinkingMode
+- (void)cjg_setText:(NSString *)text automaticWritingAnimationWithDuration:(NSTimeInterval)duration blinkingMode:(UILabelCJGlinkingMode)blinkingMode
 {
     [self cjg_setText:text automaticWritingAnimationWithDuration:duration blinkingMode:blinkingMode blinkingCharacter:UILabelAWDefaultCharacter];
 }
 
-- (void)cjg_setText:(NSString *)text automaticWritingAnimationWithDuration:(NSTimeInterval)duration blinkingMode:(UILabelJKlinkingMode)blinkingMode blinkingCharacter:(unichar)blinkingCharacter
+- (void)cjg_setText:(NSString *)text automaticWritingAnimationWithDuration:(NSTimeInterval)duration blinkingMode:(UILabelCJGlinkingMode)blinkingMode blinkingCharacter:(unichar)blinkingCharacter
 {
     [self cjg_setText:text automaticWritingAnimationWithDuration:duration blinkingMode:blinkingMode blinkingCharacter:blinkingCharacter completion:nil];
 }
 
-- (void)cjg_setText:(NSString *)text automaticWritingAnimationWithDuration:(NSTimeInterval)duration blinkingMode:(UILabelJKlinkingMode)blinkingMode blinkingCharacter:(unichar)blinkingCharacter completion:(void (^)(void))completion
+- (void)cjg_setText:(NSString *)text automaticWritingAnimationWithDuration:(NSTimeInterval)duration blinkingMode:(UILabelCJGlinkingMode)blinkingMode blinkingCharacter:(unichar)blinkingCharacter completion:(void (^)(void))completion
 {
     self.cjg_automaticWritingOperationQueue.suspended = YES;
     self.cjg_automaticWritingOperationQueue = nil;
@@ -144,19 +144,19 @@ static char kAutomaticWritingEdgeInsetsKey;
 
 #pragma mark - Private Methods
 
-- (void)cjg_automaticWriting:(NSMutableString *)text duration:(NSTimeInterval)duration mode:(UILabelJKlinkingMode)mode character:(unichar)character completion:(void (^)(void))completion
+- (void)cjg_automaticWriting:(NSMutableString *)text duration:(NSTimeInterval)duration mode:(UILabelCJGlinkingMode)mode character:(unichar)character completion:(void (^)(void))completion
 {
     NSOperationQueue *currentQueue = NSOperationQueue.currentQueue;
-    if ((text.length || mode >= UILabelJKlinkingModeWhenFinish) && !currentQueue.isSuspended)
+    if ((text.length || mode >= UILabelCJGlinkingModeWhenFinish) && !currentQueue.isSuspended)
     {
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(duration * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            if (mode != UILabelJKlinkingModeNone)
+            if (mode != UILabelCJGlinkingModeNone)
             {
                 if ([self cjg_isLastCharacter:character])
                 {
                     [self cjg_deleteLastCharacter];
                 }
-                else if (mode != UILabelJKlinkingModeWhenFinish || !text.length)
+                else if (mode != UILabelCJGlinkingModeWhenFinish || !text.length)
                 {
                     [text insertString:[self cjg_stringWithCharacter:character] atIndex:0];
                 }
@@ -166,7 +166,7 @@ static char kAutomaticWritingEdgeInsetsKey;
             {
                 [self cjg_appendCharacter:[text characterAtIndex:0]];
                 [text deleteCharactersInRange:NSMakeRange(0, 1)];
-                if ((![self cjg_isLastCharacter:character] && mode == UILabelJKlinkingModeWhenFinishShowing) || (!text.length && mode == UILabelJKlinkingModeUntilFinishKeeping))
+                if ((![self cjg_isLastCharacter:character] && mode == UILabelCJGlinkingModeWhenFinishShowing) || (!text.length && mode == UILabelCJGlinkingModeUntilFinishKeeping))
                 {
                     [self cjg_appendCharacter:character];
                 }

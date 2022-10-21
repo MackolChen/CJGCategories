@@ -16,7 +16,7 @@ typedef void (^cjg_UISearchBarSearchTextBlock) (UISearchBar *searchBar,NSString 
 typedef BOOL (^cjg_UISearchBarInRangeReplacementTextBlock) (UISearchBar *searchBar,NSRange range,NSString *text);
 typedef void (^cjg_UISearchBarScopeIndexBlock)(UISearchBar *searchBar, NSInteger selectedScope);
 
-@implementation UISearchBar (JKBlocks)
+@implementation UISearchBar (CJGBlocks)
 
 
 static const void *cjg_UISearchBarDelegateKey                                = &cjg_UISearchBarDelegateKey;

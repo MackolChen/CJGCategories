@@ -8,11 +8,11 @@
 
 #import "UIViewController+CJGBackButtonItemTitle.h"
 
-@implementation UIViewController (JKBackButtonItemTitle)
+@implementation UIViewController (CJGBackButtonItemTitle)
 
 @end
 
-@implementation UINavigationController (JKNavigationItemBackBtnTile)
+@implementation UINavigationController (CJGNavigationItemBackBtnTile)
 
 - (BOOL)navigationBar:(UINavigationBar *)navigationBar shouldPushItem:(UINavigationItem *)item {
     

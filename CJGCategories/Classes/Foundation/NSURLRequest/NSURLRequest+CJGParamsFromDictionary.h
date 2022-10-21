@@ -12,9 +12,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSURLRequest (JKParamsFromDictionary)
+@interface NSURLRequest (CJGParamsFromDictionary)
 /**
- *  @author JKCategories
+ *  @author CJGCategories
  *
  *
  *

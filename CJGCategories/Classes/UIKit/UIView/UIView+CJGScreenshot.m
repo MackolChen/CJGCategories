@@ -1,6 +1,6 @@
 //
 //  UIView+CJGScreenshot.m
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 15/1/10.
 //  Copyright (c) 2015年 www.skyfox.org. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import "UIView+CJGScreenshot.h"
 #import <QuartzCore/QuartzCore.h>
-@implementation UIView (JKScreenshot)
+@implementation UIView (CJGScreenshot)
 /**
  *  @brief  view截图
  *
@@ -34,8 +34,6 @@
  *
  *  @brief  截图一个view中所有视图 包括旋转缩放效果
  *
- *  @param aView    一个view
- *  @param limitWidth 限制缩放的最大宽度 保持默认传0
  *
  *  @return 截图
  */

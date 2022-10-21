@@ -5,7 +5,7 @@
         
     This category adds class methods to `UIImage` to create an animated `UIImage` from an animated GIF.
 */
-@interface UIImage (JKAnimatedGIF)
+@interface UIImage (CJGAnimatedGIF)
 
 /*
         UIImage *animation = [UIImage cjg_animatedImageWithAnimatedGIFData:theData];

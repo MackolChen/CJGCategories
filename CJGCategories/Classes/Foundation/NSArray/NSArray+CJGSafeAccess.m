@@ -1,6 +1,6 @@
 //
 //  NSArray+CJGSafeAccess.m
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 15/2/8.
 //  Copyright (c) 2015年 www.skyfox.org. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import "NSArray+CJGSafeAccess.h"
 
-@implementation NSArray (JKSafeAccess)
+@implementation NSArray (CJGSafeAccess)
 -(id)cjg_objectWithIndex:(NSUInteger)index{
     if (index <self.count) {
         return self[index];
@@ -300,7 +300,7 @@
 
 
 #pragma --mark NSMutableArray setter
-@implementation NSMutableArray (JKSafeAccess)
+@implementation NSMutableArray (CJGSafeAccess)
 -(void)cjg_addObj:(id)i{
     if (i!=nil) {
         [self addObject:i];

@@ -1,6 +1,6 @@
 //
 //  UITextView+Select.m
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 15/6/1.
 //  Copyright (c) 2015年 www.skyfox.org. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import "UITextView+CJGSelect.h"
 
-@implementation UITextView (JKSelect)
+@implementation UITextView (CJGSelect)
 /**
  *  @brief  当前选中的字符串范围
  *

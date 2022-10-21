@@ -1,6 +1,6 @@
 //
 //  NSObject+CJGReflection.h
-//  NSObject-JKReflection
+//  NSObject-CJGReflection
 //
 //  Created by Jakey on 15/12/22.
 //  Copyright © 2015年 Jakey. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSObject (JKReflection)
+@interface NSObject (CJGReflection)
 //类名
 - (NSString *)cjg_className;
 + (NSString *)cjg_className;

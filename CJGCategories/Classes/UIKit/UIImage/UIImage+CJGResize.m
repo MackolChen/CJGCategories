@@ -16,7 +16,7 @@
 - (CGAffineTransform)cjg_transformForOrientation:(CGSize)newSize;
 @end
 
-@implementation UIImage (JKResize)
+@implementation UIImage (CJGResize)
 
 // Returns a copy of this image that is cropped to the given bounds.
 // The bounds will be adjusted using CGRectIntegral.

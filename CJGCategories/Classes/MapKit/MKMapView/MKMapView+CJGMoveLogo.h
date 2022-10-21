@@ -11,7 +11,7 @@
 
 #import <MapKit/MapKit.h>
 
-@interface MKMapView (JKMoveLogo)
+@interface MKMapView (CJGMoveLogo)
 
 - (void)cjg_moveLogoByOffset:(CGPoint)offset;
 - (void)cjg_moveLogoToPoint:(CGPoint)point;

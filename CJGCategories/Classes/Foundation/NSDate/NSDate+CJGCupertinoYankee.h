@@ -25,7 +25,7 @@
 /**
  
  */
-@interface NSDate (JKCupertinoYankee)
+@interface NSDate (CJGCupertinoYankee)
 
 ///---------------------------------------
 /// @name Calculate Beginning / End of Day

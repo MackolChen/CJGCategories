@@ -10,7 +10,7 @@
 @interface NSIndexPath ()
 @end
 
-@implementation NSIndexPath (JKOffset)
+@implementation NSIndexPath (CJGOffset)
 #pragma mark - Offset
 - (NSIndexPath *)cjg_previousRow
 {

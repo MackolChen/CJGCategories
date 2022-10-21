@@ -9,7 +9,7 @@
 #import "UINavigationBar+CJGAwesome.h"
 #import <objc/runtime.h>
 
-@implementation UINavigationBar (JKAwesome)
+@implementation UINavigationBar (CJGAwesome)
 static char cjg_overlayKey;
 
 - (UIView *)cjg_overlay

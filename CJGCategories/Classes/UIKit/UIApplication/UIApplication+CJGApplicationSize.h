@@ -10,6 +10,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIApplication (JKApplicationSize)
+@interface UIApplication (CJGApplicationSize)
 - (NSString *)cjg_applicationSize;
 @end

@@ -1,6 +1,6 @@
 //
 //  UIView+CJGConstraints.m
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 15/5/22.
 //  Copyright (c) 2015年 www.skyfox.org. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import "UIView+CJGConstraints.h"
 
-@implementation UIView (JKConstraints)
+@implementation UIView (CJGConstraints)
 -(NSLayoutConstraint *)cjg_constraintForAttribute:(NSLayoutAttribute)attribute {
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"firstAttribute = %d && (firstItem = %@ || secondItem = %@)", attribute, self, self];
     NSArray *constraintArray = [self.superview constraints];

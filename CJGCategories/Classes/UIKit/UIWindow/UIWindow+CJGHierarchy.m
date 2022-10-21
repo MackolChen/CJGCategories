@@ -1,6 +1,6 @@
 //
 //  UIWindow+CJGHierarchy.m
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 15/1/16.
 //  Copyright (c) 2015年 www.skyfox.org. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import "UIWindow+CJGHierarchy.h"
 
-@implementation UIWindow (JKHierarchy)
+@implementation UIWindow (CJGHierarchy)
 - (UIViewController*)cjg_topMostController
 {
     UIViewController *topController = [self rootViewController];

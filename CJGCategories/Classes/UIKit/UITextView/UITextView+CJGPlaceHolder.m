@@ -1,6 +1,6 @@
 //
 //  UITextView+PlaceHolder.m
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 14/12/15.
 //  Copyright (c) 2014年 www.skyfox.org. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import "UITextView+CJGPlaceHolder.h"
 static const char *cjg_placeHolderTextView = "cjg_placeHolderTextView";
-@implementation UITextView (JKPlaceHolder)
+@implementation UITextView (CJGPlaceHolder)
 - (UITextView *)cjg_placeHolderTextView {
     return objc_getAssociatedObject(self, cjg_placeHolderTextView);
 }

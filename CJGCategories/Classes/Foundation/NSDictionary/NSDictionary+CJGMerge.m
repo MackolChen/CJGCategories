@@ -1,6 +1,6 @@
 //
 //  NSDictionary+CJGMerge.m
-//  JKCategories (https://github.com/shaojiankui/JKCategories)
+//  CJGCategories (https://github.com/shaojiankui/CJGCategories)
 //
 //  Created by Jakey on 15/1/25.
 //  Copyright (c) 2015年 www.skyfox.org. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import "NSDictionary+CJGMerge.h"
 
-@implementation NSDictionary (JKMerge)
+@implementation NSDictionary (CJGMerge)
 /**
  *  @brief  合并两个NSDictionary
  *
